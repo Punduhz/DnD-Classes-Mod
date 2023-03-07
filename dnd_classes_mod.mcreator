@@ -1,0 +1,194 @@
+{
+  "mod_elements": [],
+  "variable_elements": [
+    {
+      "name": "Class_Checker",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Class_Identifier",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Player_Max_Mana",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "Player_Available_Mana",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {}
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Classes",
+        "children": [
+          {
+            "name": "Cleric",
+            "children": [
+              {
+                "name": "Cleric Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Helleon",
+            "children": [
+              {
+                "name": "Helleon Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Ninja",
+            "children": [
+              {
+                "name": "Ninja Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Warrior",
+            "children": [
+              {
+                "name": "Warrior Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Druid",
+            "children": [
+              {
+                "name": "Druid Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Necromancer",
+            "children": [
+              {
+                "name": "Necromancer Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Archer",
+            "children": [
+              {
+                "name": "Archer Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Guardian",
+            "children": [
+              {
+                "name": "Guardian Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Assassin",
+            "children": [
+              {
+                "name": "Assassin Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Shaman",
+            "children": [
+              {
+                "name": "Shaman Gui",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Generic Settings",
+        "children": [
+          {
+            "name": "Cooldown Config",
+            "children": []
+          },
+          {
+            "name": "Levelling System",
+            "children": [
+              {
+                "name": "XP_Gain",
+                "children": []
+              },
+              {
+                "name": "Level Up Config",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Mana Config",
+            "children": []
+          },
+          {
+            "name": "Stamina Config",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Beginner Selection",
+        "children": [
+          {
+            "name": "Selection Gui",
+            "children": []
+          },
+          {
+            "name": "Selection Config",
+            "children": []
+          }
+        ]
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "dnd_classes_mod",
+    "modName": "DnD Classes Mod",
+    "version": "1.0.0",
+    "author": "owens, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.19.2",
+    "modElementsPackage": "net.mcreator.dndclassesmod",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300109612
+}

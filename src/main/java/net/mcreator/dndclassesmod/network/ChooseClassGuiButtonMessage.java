@@ -12,7 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.dndclassesmod.world.inventory.ChooseClassGuiMenu;
-import net.mcreator.dndclassesmod.procedures.SelectionProcedureClericProcedure;
+import net.mcreator.dndclassesmod.procedures.ClericSelectionProcedure;
 import net.mcreator.dndclassesmod.DndClassesModMod;
 
 import java.util.function.Supplier;
@@ -62,9 +62,9 @@ public class ChooseClassGuiButtonMessage {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
+		if (buttonID == 9) {
 
-			SelectionProcedureClericProcedure.execute(world, x, y, z, entity);
+			ClericSelectionProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

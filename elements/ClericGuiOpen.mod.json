@@ -4,9 +4,6 @@
   "definition": {
     "triggerKey": "X",
     "keyBindingName": "Cleric Gui Open",
-    "keyBindingCategoryKey": "cleric",
-    "onKeyPressed": {
-      "name": "ClericGuiAccessProcedure"
-    }
+    "keyBindingCategoryKey": "cleric"
   }
 }

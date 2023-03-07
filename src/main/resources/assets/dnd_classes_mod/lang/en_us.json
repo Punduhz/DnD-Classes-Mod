@@ -1,14 +1,5 @@
 {
   "key.categories.cleric": "Cleric Skills",
-  "gui.dnd_classes_mod.chakra_release_selection.button_fire_release": "Fire Release",
-  "effect.dnd_classes_mod.gods_gift": "Gods Gift",
-  "key.dnd_classes_mod.c_key": "C Key",
-  "key.dnd_classes_mod.v_key": "V Key",
-  "key.dnd_classes_mod.divine_blessing": "Divine Blessing",
   "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
-  "gui.dnd_classes_mod.chakra_release_selection.button_lightning_release": "Lightning Release",
-  "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open",
-  "gui.dnd_classes_mod.chakra_release_selection.button_wind_release": "Wind Release",
-  "key.dnd_classes_mod.b_key": "B Key",
-  "gui.dnd_classes_mod.chakra_release_selection.button_water_release": "Water Release"
+  "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open"
 }

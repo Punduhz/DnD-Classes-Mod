@@ -74,9 +74,6 @@ public class DndClassesModModVariables {
 			clone.Player_Level = original.Player_Level;
 			clone.IsManaUser = original.IsManaUser;
 			clone.IsStaminaUser = original.IsStaminaUser;
-			clone.Ninja_HandSign_1 = original.Ninja_HandSign_1;
-			clone.Ninja_HandSign_2 = original.Ninja_HandSign_2;
-			clone.Ninja_HandSign_3 = original.Ninja_HandSign_3;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -121,9 +118,6 @@ public class DndClassesModModVariables {
 		public double Player_Level = 1.0;
 		public boolean IsManaUser = true;
 		public boolean IsStaminaUser = true;
-		public String Ninja_HandSign_1 = "";
-		public String Ninja_HandSign_2 = "";
-		public String Ninja_HandSign_3 = "";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -140,9 +134,6 @@ public class DndClassesModModVariables {
 			nbt.putDouble("Player_Level", Player_Level);
 			nbt.putBoolean("IsManaUser", IsManaUser);
 			nbt.putBoolean("IsStaminaUser", IsStaminaUser);
-			nbt.putString("Ninja_HandSign_1", Ninja_HandSign_1);
-			nbt.putString("Ninja_HandSign_2", Ninja_HandSign_2);
-			nbt.putString("Ninja_HandSign_3", Ninja_HandSign_3);
 			return nbt;
 		}
 
@@ -156,9 +147,6 @@ public class DndClassesModModVariables {
 			Player_Level = nbt.getDouble("Player_Level");
 			IsManaUser = nbt.getBoolean("IsManaUser");
 			IsStaminaUser = nbt.getBoolean("IsStaminaUser");
-			Ninja_HandSign_1 = nbt.getString("Ninja_HandSign_1");
-			Ninja_HandSign_2 = nbt.getString("Ninja_HandSign_2");
-			Ninja_HandSign_3 = nbt.getString("Ninja_HandSign_3");
 		}
 	}
 
@@ -191,9 +179,6 @@ public class DndClassesModModVariables {
 					variables.Player_Level = message.data.Player_Level;
 					variables.IsManaUser = message.data.IsManaUser;
 					variables.IsStaminaUser = message.data.IsStaminaUser;
-					variables.Ninja_HandSign_1 = message.data.Ninja_HandSign_1;
-					variables.Ninja_HandSign_2 = message.data.Ninja_HandSign_2;
-					variables.Ninja_HandSign_3 = message.data.Ninja_HandSign_3;
 				}
 			});
 			context.setPacketHandled(true);

@@ -72,6 +72,8 @@ public class DndClassesModModVariables {
 			clone.Player_Available_Mana = original.Player_Available_Mana;
 			clone.Player_XP = original.Player_XP;
 			clone.Player_Level = original.Player_Level;
+			clone.IsManaUser = original.IsManaUser;
+			clone.IsStaminaUser = original.IsStaminaUser;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -114,6 +116,8 @@ public class DndClassesModModVariables {
 		public double Player_Available_Mana = 0;
 		public double Player_XP = 0;
 		public double Player_Level = 1.0;
+		public boolean IsManaUser = true;
+		public boolean IsStaminaUser = true;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -128,6 +132,8 @@ public class DndClassesModModVariables {
 			nbt.putDouble("Player_Available_Mana", Player_Available_Mana);
 			nbt.putDouble("Player_XP", Player_XP);
 			nbt.putDouble("Player_Level", Player_Level);
+			nbt.putBoolean("IsManaUser", IsManaUser);
+			nbt.putBoolean("IsStaminaUser", IsStaminaUser);
 			return nbt;
 		}
 
@@ -139,6 +145,8 @@ public class DndClassesModModVariables {
 			Player_Available_Mana = nbt.getDouble("Player_Available_Mana");
 			Player_XP = nbt.getDouble("Player_XP");
 			Player_Level = nbt.getDouble("Player_Level");
+			IsManaUser = nbt.getBoolean("IsManaUser");
+			IsStaminaUser = nbt.getBoolean("IsStaminaUser");
 		}
 	}
 
@@ -169,6 +177,8 @@ public class DndClassesModModVariables {
 					variables.Player_Available_Mana = message.data.Player_Available_Mana;
 					variables.Player_XP = message.data.Player_XP;
 					variables.Player_Level = message.data.Player_Level;
+					variables.IsManaUser = message.data.IsManaUser;
+					variables.IsStaminaUser = message.data.IsStaminaUser;
 				}
 			});
 			context.setPacketHandled(true);

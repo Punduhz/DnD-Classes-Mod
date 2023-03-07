@@ -125,50 +125,6 @@
         ]
       },
       "path": "~/Generic Settings/Levelling System/Level Up Config"
-    },
-    {
-      "name": "PlayerManaSet",
-      "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_mana_set",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/PlayerManaSetProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Generic Settings/Mana Config"
-    },
-    {
-      "name": "PlayerManaRegen",
-      "type": "procedure",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_mana_regen",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/PlayerManaRegenProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Generic Settings/Mana Config"
     }
   ],
   "variable_elements": [
@@ -207,18 +163,6 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
-    },
-    {
-      "name": "IsManaUser",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "true"
-    },
-    {
-      "name": "IsStaminaUser",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "true"
     }
   ],
   "sound_elements": [],
@@ -249,14 +193,6 @@
             "children": []
           },
           {
-            "name": "Stamina Config",
-            "children": []
-          },
-          {
-            "name": "Mana Config",
-            "children": []
-          },
-          {
             "name": "Levelling System",
             "children": [
               {
@@ -268,6 +204,14 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Stamina Config",
+            "children": []
+          },
+          {
+            "name": "Mana Config",
+            "children": []
           }
         ]
       },

@@ -1,0 +1,41 @@
+{
+  "_fv": 39,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 348,
+    "height": 214,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "recolored_tech_tree.png",
+          "use1Xscale": false,
+          "x": 45,
+          "y": 20
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_resized_divine_cleansing",
+          "image": "resized_divine_cleansing.png",
+          "hoveredImage": "",
+          "x": 104,
+          "y": 108
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

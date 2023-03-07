@@ -1,5 +1,20 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "ClericGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cleric_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java"
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Gui"
+    }
+  ],
   "variable_elements": [
     {
       "name": "Class_Checker",

@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "V",
+    "keyBindingName": "V Key",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "VSet"
+    }
+  }
+}

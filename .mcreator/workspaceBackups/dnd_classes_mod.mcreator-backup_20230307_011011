@@ -45,8 +45,8 @@
       "registry_name": "cleric_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java"
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
         ]
       },
       "path": "~/Classes/Cleric/Cleric Gui"
@@ -180,8 +180,9 @@
       "registry_name": "choose_class_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java"
+          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java"
         ]
       },
       "path": "~/Beginner Selection/Selection Gui"
@@ -225,7 +226,7 @@
     {
       "name": "ClericGuiOpen",
       "type": "keybind",
-      "sortid": 12,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cleric_gui_open",
@@ -235,6 +236,70 @@
         ]
       },
       "path": "~/Classes/Cleric/Cleric KeyBinds"
+    },
+    {
+      "name": "GodsGift",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gods_gift",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/potion/GodsGiftMobEffect.java"
+        ]
+      },
+      "path": "~/Classes/Cleric/Cleric Potion Effects"
+    },
+    {
+      "name": "GodsGiftProcedure",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gods_gift_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/GodsGiftProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Classes/Cleric/Cleric Procedures/Abilities/GodsGift"
+    },
+    {
+      "name": "ChakraReleaseSelection",
+      "type": "gui",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chakra_release_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChakraReleaseSelectionScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChakraReleaseSelectionMenu.java"
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Gui"
     },
     {
       "name": "DivineBlessing",
@@ -249,6 +314,35 @@
         ]
       },
       "path": "~/Classes/Cleric/Cleric KeyBinds"
+    },
+    {
+      "name": "CKey",
+      "type": "keybind",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_key",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/CKeyMessage.java"
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "KeyAssignments",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "key_assignments",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/KeyAssignmentsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
     }
   ],
   "variable_elements": [
@@ -299,6 +393,24 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "true"
+    },
+    {
+      "name": "Ninja_HandSign_1",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Ninja_HandSign_2",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
+    },
+    {
+      "name": "Ninja_HandSign_3",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": ""
     }
   ],
   "sound_elements": [],
@@ -307,7 +419,13 @@
       "key.dnd_classes_mod.divine_blessing": "Divine Blessing",
       "key.categories.cleric": "Cleric Skills",
       "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
-      "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open"
+      "gui.dnd_classes_mod.chakra_release_selection.button_lightning_release": "Lightning Release",
+      "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open",
+      "gui.dnd_classes_mod.chakra_release_selection.button_fire_release": "Fire Release",
+      "gui.dnd_classes_mod.chakra_release_selection.button_wind_release": "Wind Release",
+      "effect.dnd_classes_mod.gods_gift": "Gods Gift",
+      "gui.dnd_classes_mod.chakra_release_selection.button_water_release": "Water Release",
+      "key.dnd_classes_mod.c_key": "C Key"
     }
   },
   "foldersRoot": {
@@ -334,6 +452,10 @@
             "children": []
           },
           {
+            "name": "KeyBinds",
+            "children": []
+          },
+          {
             "name": "Levelling System",
             "children": [
               {
@@ -356,10 +478,6 @@
           },
           {
             "name": "Mana Config",
-            "children": []
-          },
-          {
-            "name": "KeyBinds",
             "children": []
           }
         ]
@@ -426,10 +544,24 @@
             "children": [
               {
                 "name": "Cleric Procedures",
-                "children": []
+                "children": [
+                  {
+                    "name": "Abilities",
+                    "children": [
+                      {
+                        "name": "GodsGift",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "name": "Cleric KeyBinds",
+                "children": []
+              },
+              {
+                "name": "Cleric Potion Effects",
                 "children": []
               },
               {
@@ -444,6 +576,19 @@
               {
                 "name": "Ninja Gui",
                 "children": []
+              },
+              {
+                "name": "Ninja Procedures",
+                "children": [
+                  {
+                    "name": "KeyBinds",
+                    "children": []
+                  },
+                  {
+                    "name": "Ninja HandSignProcedures",
+                    "children": []
+                  }
+                ]
               }
             ]
           },
@@ -483,6 +628,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.dndclassesmod",
     "lockBaseModFiles": false
   },

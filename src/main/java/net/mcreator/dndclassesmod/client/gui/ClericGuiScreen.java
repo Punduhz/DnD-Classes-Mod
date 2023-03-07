@@ -1,25 +1,27 @@
 package net.mcreator.dndclassesmod.client.gui;
 
-public class AsdScreen extends AbstractContainerScreen<AsdMenu> {
+public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
 
-	private final static HashMap<String, Object> guistate = AsdMenu.guistate;
+	private final static HashMap<String, Object> guistate = ClericGuiMenu.guistate;
 
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
 
-	public AsdScreen(AsdMenu container, Inventory inventory, Component text) {
+	ImageButton imagebutton_resized_divine_cleansing;
+
+	public ClericGuiScreen(ClericGuiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
 		this.y = container.y;
 		this.z = container.z;
 		this.entity = container.entity;
-		this.imageWidth = 176;
-		this.imageHeight = 166;
+		this.imageWidth = 348;
+		this.imageHeight = 214;
 	}
 
-	private static final ResourceLocation texture = new ResourceLocation("dnd_classes_mod:textures/screens/asd.png");
+	private static final ResourceLocation texture = new ResourceLocation("dnd_classes_mod:textures/screens/cleric_gui.png");
 
 	@Override
 	public void render(PoseStack ms, int mouseX, int mouseY, float partialTicks) {
@@ -37,6 +39,9 @@ public class AsdScreen extends AbstractContainerScreen<AsdMenu> {
 
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		RenderSystem.setShaderTexture(0, new ResourceLocation("dnd_classes_mod:textures/screens/recolored_tech_tree.png"));
+		this.blit(ms, this.leftPos + 5, this.topPos + 7, 0, 0, 334, 200, 334, 200);
 
 		RenderSystem.disableBlend();
 	}
@@ -71,6 +76,12 @@ public class AsdScreen extends AbstractContainerScreen<AsdMenu> {
 		super.init();
 
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+
+		imagebutton_resized_divine_cleansing = new ImageButton(this.leftPos + 64, this.topPos + 95, 28, 28, 0, 0, 28, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_resized_divine_cleansing.png"), 28, 56, e -> {
+		});
+
+		guistate.put("button:imagebutton_resized_divine_cleansing", imagebutton_resized_divine_cleansing);
+		this.addRenderableWidget(imagebutton_resized_divine_cleansing);
 
 	}
 

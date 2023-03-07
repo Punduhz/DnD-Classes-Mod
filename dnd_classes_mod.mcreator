@@ -1,20 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "Asd",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "asd",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/AsdScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/AsdMenu.java"
-        ]
-      },
-      "path": "~/Beginner Selection/Selection Gui"
-    },
-    {
       "name": "PlayerClassChecker",
       "type": "procedure",
       "compiles": true,
@@ -48,6 +34,34 @@
         ]
       },
       "path": "~/Beginner Selection/Selection Config"
+    },
+    {
+      "name": "Asd",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "asd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/AsdScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/AsdMenu.java"
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Gui"
+    },
+    {
+      "name": "ClericGui",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cleric_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Gui"
     }
   ],
   "variable_elements": [
@@ -84,97 +98,15 @@
     "name": "~",
     "children": [
       {
-        "name": "Classes",
+        "name": "Beginner Selection",
         "children": [
           {
-            "name": "Cleric",
-            "children": [
-              {
-                "name": "Cleric Gui",
-                "children": []
-              }
-            ]
+            "name": "Selection Config",
+            "children": []
           },
           {
-            "name": "Helleon",
-            "children": [
-              {
-                "name": "Helleon Gui",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Ninja",
-            "children": [
-              {
-                "name": "Ninja Gui",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Warrior",
-            "children": [
-              {
-                "name": "Warrior Gui",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Druid",
-            "children": [
-              {
-                "name": "Druid Gui",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Necromancer",
-            "children": [
-              {
-                "name": "Necromancer Gui",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Archer",
-            "children": [
-              {
-                "name": "Archer Gui",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Guardian",
-            "children": [
-              {
-                "name": "Guardian Gui",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Assassin",
-            "children": [
-              {
-                "name": "Assassin Gui",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Shaman",
-            "children": [
-              {
-                "name": "Shaman Gui",
-                "children": []
-              }
-            ]
+            "name": "Selection Gui",
+            "children": []
           }
         ]
       },
@@ -199,25 +131,107 @@
             ]
           },
           {
-            "name": "Mana Config",
+            "name": "Stamina Config",
             "children": []
           },
           {
-            "name": "Stamina Config",
+            "name": "Mana Config",
             "children": []
           }
         ]
       },
       {
-        "name": "Beginner Selection",
+        "name": "Classes",
         "children": [
           {
-            "name": "Selection Gui",
-            "children": []
+            "name": "Helleon",
+            "children": [
+              {
+                "name": "Helleon Gui",
+                "children": []
+              }
+            ]
           },
           {
-            "name": "Selection Config",
-            "children": []
+            "name": "Guardian",
+            "children": [
+              {
+                "name": "Guardian Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Warrior",
+            "children": [
+              {
+                "name": "Warrior Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Necromancer",
+            "children": [
+              {
+                "name": "Necromancer Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Archer",
+            "children": [
+              {
+                "name": "Archer Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Assassin",
+            "children": [
+              {
+                "name": "Assassin Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Cleric",
+            "children": [
+              {
+                "name": "Cleric Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Ninja",
+            "children": [
+              {
+                "name": "Ninja Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Druid",
+            "children": [
+              {
+                "name": "Druid Gui",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Shaman",
+            "children": [
+              {
+                "name": "Shaman Gui",
+                "children": []
+              }
+            ]
           }
         ]
       }

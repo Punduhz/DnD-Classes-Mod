@@ -3,7 +3,7 @@ package net.mcreator.dndclassesmod.world.inventory;
 
 import net.mcreator.dndclassesmod.DndClassesModMod;
 
-public class AsdMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
+public class ClericGuiMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
 	public final Level world;
 	public final Player entity;
@@ -12,8 +12,8 @@ public class AsdMenu extends AbstractContainerMenu implements Supplier<Map<Integ
 	private final Map<Integer, Slot> customSlots = new HashMap<>();
 	private boolean bound = false;
 
-	public AsdMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(DndClassesModModMenus.ASD.get(), id);
+	public ClericGuiMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
+		super(DndClassesModModMenus.CLERIC_GUI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level;
 		this.internal = new ItemStackHandler(0);

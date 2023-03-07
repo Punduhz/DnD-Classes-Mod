@@ -15,7 +15,7 @@
         "data": {
           "image": "class_selection.png",
           "use1Xscale": false,
-          "x": 44,
+          "x": 42,
           "y": 8
         }
       },
@@ -26,10 +26,109 @@
           "image": "cleric_emblem.png",
           "hoveredImage": "",
           "onClick": {
-            "name": "SelectionProcedureCleric"
+            "name": "ClericSelection"
           },
           "x": 192,
           "y": 8
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_druid",
+          "text": "Druid",
+          "width": 51,
+          "height": 20,
+          "x": 133,
+          "y": 35
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_necromancer",
+          "text": "Necromancer",
+          "width": 82,
+          "height": 20,
+          "x": 88,
+          "y": 81
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_archer",
+          "text": "Archer",
+          "width": 56,
+          "height": 20,
+          "x": 97,
+          "y": 133
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_guardian",
+          "text": "Guardian",
+          "width": 67,
+          "height": 20,
+          "x": 125,
+          "y": 177
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_assassin",
+          "text": "Assassin",
+          "width": 67,
+          "height": 20,
+          "x": 176,
+          "y": 196
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_helleon",
+          "text": "Helleon",
+          "width": 61,
+          "height": 20,
+          "x": 233,
+          "y": 176
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_warrior",
+          "text": "Warrior",
+          "width": 61,
+          "height": 20,
+          "x": 266,
+          "y": 133
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_ninja",
+          "text": "Ninja",
+          "width": 51,
+          "height": 20,
+          "x": 270,
+          "y": 78
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_shaman",
+          "text": "Shaman",
+          "width": 56,
+          "height": 20,
+          "x": 234,
+          "y": 35
         }
       }
     ],

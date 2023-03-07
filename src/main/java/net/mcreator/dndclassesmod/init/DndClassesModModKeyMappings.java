@@ -16,27 +16,28 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
 import net.mcreator.dndclassesmod.network.VKeyMessage;
-import net.mcreator.dndclassesmod.network.ClericGuiOpenMessage;
+import net.mcreator.dndclassesmod.network.MainGuiOpenMessage;
+import net.mcreator.dndclassesmod.network.DivineBlessingMessage;
 import net.mcreator.dndclassesmod.network.CKeyMessage;
 import net.mcreator.dndclassesmod.network.BKeyMessage;
 import net.mcreator.dndclassesmod.DndClassesModMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class DndClassesModModKeyMappings {
-	public static final KeyMapping DIVINE_BLESSING = new KeyMapping("key.dnd_classes_mod.divine_blessing", GLFW.GLFW_KEY_0, "key.categories.cleric");
-	public static final KeyMapping CLERIC_GUI_OPEN = new KeyMapping("key.dnd_classes_mod.cleric_gui_open", GLFW.GLFW_KEY_X, "key.categories.cleric") {
+	public static final KeyMapping DIVINE_BLESSING = new KeyMapping("key.dnd_classes_mod.divine_blessing", GLFW.GLFW_KEY_0, "key.categories.cleric") {
 		private boolean isDownOld = false;
 
 		@Override
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				DndClassesModMod.PACKET_HANDLER.sendToServer(new ClericGuiOpenMessage(0, 0));
-				ClericGuiOpenMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+				DndClassesModMod.PACKET_HANDLER.sendToServer(new DivineBlessingMessage(0, 0));
+				DivineBlessingMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping CLERIC_GUI_OPEN = new KeyMapping("key.dnd_classes_mod.cleric_gui_open", GLFW.GLFW_KEY_X, "key.categories.cleric");
 	public static final KeyMapping C_KEY = new KeyMapping("key.dnd_classes_mod.c_key", GLFW.GLFW_KEY_C, "key.categories.misc") {
 		private boolean isDownOld = false;
 
@@ -85,6 +86,19 @@ public class DndClassesModModKeyMappings {
 	public static final KeyMapping NECROMANCERABILITY_1 = new KeyMapping("key.dnd_classes_mod.necromancerability_1", GLFW.GLFW_KEY_0, "key.categories.necro");
 	public static final KeyMapping ARCHER_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.archer_ability_1", GLFW.GLFW_KEY_0, "key.categories.archer");
 	public static final KeyMapping ASSASSINABILITY_1 = new KeyMapping("key.dnd_classes_mod.assassinability_1", GLFW.GLFW_KEY_0, "key.categories.assassin");
+	public static final KeyMapping MAIN_GUI_OPEN = new KeyMapping("key.dnd_classes_mod.main_gui_open", GLFW.GLFW_KEY_X, "key.categories.misc") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				DndClassesModMod.PACKET_HANDLER.sendToServer(new MainGuiOpenMessage(0, 0));
+				MainGuiOpenMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -102,6 +116,7 @@ public class DndClassesModModKeyMappings {
 		event.register(NECROMANCERABILITY_1);
 		event.register(ARCHER_ABILITY_1);
 		event.register(ASSASSINABILITY_1);
+		event.register(MAIN_GUI_OPEN);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -109,10 +124,11 @@ public class DndClassesModModKeyMappings {
 		@SubscribeEvent
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
-				CLERIC_GUI_OPEN.consumeClick();
+				DIVINE_BLESSING.consumeClick();
 				C_KEY.consumeClick();
 				V_KEY.consumeClick();
 				B_KEY.consumeClick();
+				MAIN_GUI_OPEN.consumeClick();
 			}
 		}
 	}

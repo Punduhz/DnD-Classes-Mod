@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "X",
+    "keyBindingName": "Main Gui Open",
+    "keyBindingCategoryKey": "misc",
+    "onKeyPressed": {
+      "name": "MainGuiOpenProcedure"
+    }
+  }
+}

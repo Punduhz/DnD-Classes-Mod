@@ -4,6 +4,9 @@
   "definition": {
     "triggerKey": "0",
     "keyBindingName": "Divine Blessing",
-    "keyBindingCategoryKey": "cleric"
+    "keyBindingCategoryKey": "cleric",
+    "onKeyPressed": {
+      "name": "DivineBlessingProcedures"
+    }
   }
 }

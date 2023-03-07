@@ -15,22 +15,21 @@
         "data": {
           "image": "class_selection.png",
           "use1Xscale": false,
-          "x": 43,
-          "y": 12
+          "x": 39,
+          "y": 1
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_cleric",
-          "text": "Cleric",
+          "name": "imagebutton_cleric_emblem",
+          "image": "cleric_emblem.png",
+          "hoveredImage": "",
           "onClick": {
             "name": "SelectionProcedureCleric"
           },
-          "width": 56,
-          "height": 20,
-          "x": 184,
-          "y": 23
+          "x": 188,
+          "y": 0
         }
       }
     ],

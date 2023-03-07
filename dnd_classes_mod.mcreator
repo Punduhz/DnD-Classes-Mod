@@ -45,8 +45,8 @@
       "registry_name": "cleric_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java"
         ]
       },
       "path": "~/Classes/Cleric/Cleric Gui"

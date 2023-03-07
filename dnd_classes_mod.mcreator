@@ -48,7 +48,7 @@
           "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
         ]
       },
-      "path": "~/Beginner Selection/Selection Gui"
+      "path": "~/Classes/Cleric/Cleric Gui"
     },
     {
       "name": "SelectionProcedureCleric",

@@ -180,9 +180,8 @@
       "registry_name": "choose_class_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java"
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java"
         ]
       },
       "path": "~/Beginner Selection/Selection Gui"
@@ -290,6 +289,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "key.categories.cleric": "Cleric Skills",
       "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
       "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open"
     }
@@ -340,6 +340,10 @@
           },
           {
             "name": "Mana Config",
+            "children": []
+          },
+          {
+            "name": "KeyBinds",
             "children": []
           }
         ]

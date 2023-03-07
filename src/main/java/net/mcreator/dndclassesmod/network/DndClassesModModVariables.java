@@ -70,6 +70,8 @@ public class DndClassesModModVariables {
 			clone.Class_Identifier = original.Class_Identifier;
 			clone.Player_Max_Mana = original.Player_Max_Mana;
 			clone.Player_Available_Mana = original.Player_Available_Mana;
+			clone.Player_XP = original.Player_XP;
+			clone.Player_Level = original.Player_Level;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -110,6 +112,8 @@ public class DndClassesModModVariables {
 		public double Class_Identifier = 0;
 		public double Player_Max_Mana = 0;
 		public double Player_Available_Mana = 0;
+		public double Player_XP = 0;
+		public double Player_Level = 1.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -122,6 +126,8 @@ public class DndClassesModModVariables {
 			nbt.putDouble("Class_Identifier", Class_Identifier);
 			nbt.putDouble("Player_Max_Mana", Player_Max_Mana);
 			nbt.putDouble("Player_Available_Mana", Player_Available_Mana);
+			nbt.putDouble("Player_XP", Player_XP);
+			nbt.putDouble("Player_Level", Player_Level);
 			return nbt;
 		}
 
@@ -131,6 +137,8 @@ public class DndClassesModModVariables {
 			Class_Identifier = nbt.getDouble("Class_Identifier");
 			Player_Max_Mana = nbt.getDouble("Player_Max_Mana");
 			Player_Available_Mana = nbt.getDouble("Player_Available_Mana");
+			Player_XP = nbt.getDouble("Player_XP");
+			Player_Level = nbt.getDouble("Player_Level");
 		}
 	}
 
@@ -159,6 +167,8 @@ public class DndClassesModModVariables {
 					variables.Class_Identifier = message.data.Class_Identifier;
 					variables.Player_Max_Mana = message.data.Player_Max_Mana;
 					variables.Player_Available_Mana = message.data.Player_Available_Mana;
+					variables.Player_XP = message.data.Player_XP;
+					variables.Player_Level = message.data.Player_Level;
 				}
 			});
 			context.setPacketHandled(true);

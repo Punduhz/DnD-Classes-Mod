@@ -12,7 +12,6 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.dndclassesmod.client.gui.ClericGuiScreen;
-import net.mcreator.dndclassesmod.client.gui.AsdScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DndClassesModModScreens {
@@ -20,7 +19,6 @@ public class DndClassesModModScreens {
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
 			MenuScreens.register(DndClassesModModMenus.CLERIC_GUI.get(), ClericGuiScreen::new);
-			MenuScreens.register(DndClassesModModMenus.ASD.get(), AsdScreen::new);
 		});
 	}
 }

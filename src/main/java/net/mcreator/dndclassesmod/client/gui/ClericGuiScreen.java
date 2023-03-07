@@ -1,13 +1,26 @@
 package net.mcreator.dndclassesmod.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.dndclassesmod.world.inventory.ClericGuiMenu;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
-
 	private final static HashMap<String, Object> guistate = ClericGuiMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-
 	ImageButton imagebutton_resized_divine_cleansing;
 
 	public ClericGuiScreen(ClericGuiMenu container, Inventory inventory, Component text) {
@@ -28,7 +41,6 @@ public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -36,7 +48,6 @@ public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
@@ -52,7 +63,6 @@ public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -74,15 +84,10 @@ public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
 		imagebutton_resized_divine_cleansing = new ImageButton(this.leftPos + 64, this.topPos + 95, 28, 28, 0, 0, 28, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_resized_divine_cleansing.png"), 28, 56, e -> {
 		});
-
 		guistate.put("button:imagebutton_resized_divine_cleansing", imagebutton_resized_divine_cleansing);
 		this.addRenderableWidget(imagebutton_resized_divine_cleansing);
-
 	}
-
 }

@@ -111,18 +111,6 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
-    },
-    {
-      "name": "Player_XP",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "Player_Level",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
     }
   ],
   "sound_elements": [],

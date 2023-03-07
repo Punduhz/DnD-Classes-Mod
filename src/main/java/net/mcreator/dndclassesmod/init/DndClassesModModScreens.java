@@ -12,12 +12,14 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.dndclassesmod.client.gui.ClericGuiScreen;
+import net.mcreator.dndclassesmod.client.gui.ChooseClassGuiScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class DndClassesModModScreens {
 	@SubscribeEvent
 	public static void clientLoad(FMLClientSetupEvent event) {
 		event.enqueueWork(() -> {
+			MenuScreens.register(DndClassesModModMenus.CHOOSE_CLASS_GUI.get(), ChooseClassGuiScreen::new);
 			MenuScreens.register(DndClassesModModMenus.CLERIC_GUI.get(), ClericGuiScreen::new);
 		});
 	}

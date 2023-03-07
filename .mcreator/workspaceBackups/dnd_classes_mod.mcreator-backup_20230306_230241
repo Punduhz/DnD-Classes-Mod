@@ -39,6 +39,7 @@
     {
       "name": "ClericGui",
       "type": "gui",
+      "sortid": 8,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cleric_gui",
@@ -48,7 +49,7 @@
           "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
         ]
       },
-      "path": "~/Beginner Selection/Selection Gui"
+      "path": "~/Classes/Cleric/Cleric Gui"
     },
     {
       "name": "SelectionProcedureCleric",
@@ -105,6 +106,86 @@
         ]
       },
       "path": "~/Generic Settings/Levelling System/XP_Gain"
+    },
+    {
+      "name": "PlayerLevelUpProcedure",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_level_up_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/PlayerLevelUpProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Generic Settings/Levelling System/Level Up Config"
+    },
+    {
+      "name": "PlayerManaSet",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_mana_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/PlayerManaSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Generic Settings/Mana Config"
+    },
+    {
+      "name": "PlayerManaRegen",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_mana_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/PlayerManaRegenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generic Settings/Mana Config"
+    },
+    {
+      "name": "ChooseClassGui",
+      "type": "gui",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choose_class_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java"
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Gui"
     }
   ],
   "variable_elements": [
@@ -143,11 +224,25 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
+    },
+    {
+      "name": "IsManaUser",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "IsStaminaUser",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -173,6 +268,14 @@
             "children": []
           },
           {
+            "name": "Stamina Config",
+            "children": []
+          },
+          {
+            "name": "Mana Config",
+            "children": []
+          },
+          {
             "name": "Levelling System",
             "children": [
               {
@@ -184,14 +287,6 @@
                 "children": []
               }
             ]
-          },
-          {
-            "name": "Stamina Config",
-            "children": []
-          },
-          {
-            "name": "Mana Config",
-            "children": []
           }
         ]
       },
@@ -257,6 +352,10 @@
             "children": [
               {
                 "name": "Cleric Gui",
+                "children": []
+              },
+              {
+                "name": "Cleric KeyBinds",
                 "children": []
               }
             ]

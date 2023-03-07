@@ -1,0 +1,12 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "X",
+    "keyBindingName": "Cleric Gui Open",
+    "keyBindingCategoryKey": "cleric",
+    "onKeyPressed": {
+      "name": "ClericGuiAccessProcedure"
+    }
+  }
+}

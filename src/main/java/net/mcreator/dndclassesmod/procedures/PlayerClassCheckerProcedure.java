@@ -17,7 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
-import net.mcreator.dndclassesmod.world.inventory.ClericGuiMenu;
+import net.mcreator.dndclassesmod.world.inventory.ChooseClassGuiMenu;
 import net.mcreator.dndclassesmod.network.DndClassesModModVariables;
 
 import javax.annotation.Nullable;
@@ -45,12 +45,12 @@ public class PlayerClassCheckerProcedure {
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
-							return Component.literal("ClericGui");
+							return Component.literal("ChooseClassGui");
 						}
 
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-							return new ClericGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+							return new ChooseClassGuiMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

@@ -234,70 +234,6 @@
         ]
       },
       "path": "~/Classes/Cleric/Cleric KeyBinds"
-    },
-    {
-      "name": "GodsGift",
-      "type": "potioneffect",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gods_gift",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/potion/GodsGiftMobEffect.java"
-        ]
-      },
-      "path": "~/Classes/Cleric/Cleric Potion Effects"
-    },
-    {
-      "name": "GodsGiftProcedure",
-      "type": "procedure",
-      "sortid": 11,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gods_gift_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/GodsGiftProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Classes/Cleric/Cleric Procedures/Abilities/GodsGift"
-    },
-    {
-      "name": "ChakraReleaseSelection",
-      "type": "gui",
-      "sortid": 12,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "chakra_release_selection",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChakraReleaseSelectionScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChakraReleaseSelectionMenu.java"
-        ]
-      },
-      "path": "~/Classes/Ninja/Ninja Gui"
     }
   ],
   "variable_elements": [
@@ -355,12 +291,7 @@
     "en_us": {
       "key.categories.cleric": "Cleric Skills",
       "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
-      "gui.dnd_classes_mod.chakra_release_selection.button_lightning_release": "Lightning Release",
-      "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open",
-      "gui.dnd_classes_mod.chakra_release_selection.button_fire_release": "Fire Release",
-      "gui.dnd_classes_mod.chakra_release_selection.button_wind_release": "Wind Release",
-      "effect.dnd_classes_mod.gods_gift": "Gods Gift",
-      "gui.dnd_classes_mod.chakra_release_selection.button_water_release": "Water Release"
+      "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open"
     }
   },
   "foldersRoot": {
@@ -479,17 +410,7 @@
             "children": [
               {
                 "name": "Cleric Procedures",
-                "children": [
-                  {
-                    "name": "Abilities",
-                    "children": [
-                      {
-                        "name": "GodsGift",
-                        "children": []
-                      }
-                    ]
-                  }
-                ]
+                "children": []
               },
               {
                 "name": "Cleric KeyBinds",
@@ -497,10 +418,6 @@
               },
               {
                 "name": "Cleric Gui",
-                "children": []
-              },
-              {
-                "name": "Cleric Potion Effects",
                 "children": []
               }
             ]
@@ -510,10 +427,6 @@
             "children": [
               {
                 "name": "Ninja Gui",
-                "children": []
-              },
-              {
-                "name": "Ninja Procedures",
                 "children": []
               }
             ]

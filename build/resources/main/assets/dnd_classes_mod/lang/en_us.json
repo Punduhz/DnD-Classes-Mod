@@ -1,4 +1,5 @@
 {
+  "key.categories.cleric": "Cleric Skills",
   "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
   "gui.dnd_classes_mod.chakra_release_selection.button_lightning_release": "Lightning Release",
   "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open",

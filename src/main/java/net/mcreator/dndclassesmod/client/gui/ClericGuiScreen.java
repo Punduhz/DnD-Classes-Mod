@@ -85,7 +85,7 @@ public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		imagebutton_resized_divine_cleansing = new ImageButton(this.leftPos + 64, this.topPos + 95, 28, 28, 0, 0, 28, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_resized_divine_cleansing.png"), 28, 56, e -> {
+		imagebutton_resized_divine_cleansing = new ImageButton(this.leftPos + 54, this.topPos + 132, 28, 28, 0, 0, 28, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_resized_divine_cleansing.png"), 28, 56, e -> {
 		});
 		guistate.put("button:imagebutton_resized_divine_cleansing", imagebutton_resized_divine_cleansing);
 		this.addRenderableWidget(imagebutton_resized_divine_cleansing);

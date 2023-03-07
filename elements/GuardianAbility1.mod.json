@@ -1,0 +1,9 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "0",
+    "keyBindingName": "Guardian Ability 1",
+    "keyBindingCategoryKey": "guardian"
+  }
+}

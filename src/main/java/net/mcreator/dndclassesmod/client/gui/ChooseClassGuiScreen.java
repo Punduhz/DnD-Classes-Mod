@@ -54,7 +54,7 @@ public class ChooseClassGuiScreen extends AbstractContainerScreen<ChooseClassGui
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
 		RenderSystem.setShaderTexture(0, new ResourceLocation("dnd_classes_mod:textures/screens/class_selection.png"));
-		this.blit(ms, this.leftPos + -174, this.topPos + -119, 0, 0, 348, 218, 348, 218);
+		this.blit(ms, this.leftPos + -169, this.topPos + -112, 0, 0, 348, 218, 348, 218);
 
 		RenderSystem.disableBlend();
 	}
@@ -87,7 +87,7 @@ public class ChooseClassGuiScreen extends AbstractContainerScreen<ChooseClassGui
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		imagebutton_cleric_emblem = new ImageButton(this.leftPos + -25, this.topPos + -120, 37, 43, 0, 0, 43, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_cleric_emblem.png"), 37, 86, e -> {
+		imagebutton_cleric_emblem = new ImageButton(this.leftPos + -21, this.topPos + -112, 37, 43, 0, 0, 43, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_cleric_emblem.png"), 37, 86, e -> {
 			if (true) {
 				DndClassesModMod.PACKET_HANDLER.sendToServer(new ChooseClassGuiButtonMessage(0, x, y, z));
 				ChooseClassGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);

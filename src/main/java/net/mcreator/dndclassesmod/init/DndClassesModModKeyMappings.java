@@ -15,7 +15,10 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
 
+import net.mcreator.dndclassesmod.network.VKeyMessage;
 import net.mcreator.dndclassesmod.network.ClericGuiOpenMessage;
+import net.mcreator.dndclassesmod.network.CKeyMessage;
+import net.mcreator.dndclassesmod.network.BKeyMessage;
 import net.mcreator.dndclassesmod.DndClassesModMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -34,11 +37,71 @@ public class DndClassesModModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping C_KEY = new KeyMapping("key.dnd_classes_mod.c_key", GLFW.GLFW_KEY_C, "key.categories.misc") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				DndClassesModMod.PACKET_HANDLER.sendToServer(new CKeyMessage(0, 0));
+				CKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping V_KEY = new KeyMapping("key.dnd_classes_mod.v_key", GLFW.GLFW_KEY_V, "key.categories.misc") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				DndClassesModMod.PACKET_HANDLER.sendToServer(new VKeyMessage(0, 0));
+				VKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping B_KEY = new KeyMapping("key.dnd_classes_mod.b_key", GLFW.GLFW_KEY_B, "key.categories.misc") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				DndClassesModMod.PACKET_HANDLER.sendToServer(new BKeyMessage(0, 0));
+				BKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
+	public static final KeyMapping NINJAABILITY_1 = new KeyMapping("key.dnd_classes_mod.ninjaability_1", GLFW.GLFW_KEY_0, "key.categories.ninja");
+	public static final KeyMapping DRUID_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.druid_ability_1", GLFW.GLFW_KEY_0, "key.categories.druid");
+	public static final KeyMapping SHAMAN_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.shaman_ability_1", GLFW.GLFW_KEY_0, "key.categories.shaman");
+	public static final KeyMapping HELLEON_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.helleon_ability_1", GLFW.GLFW_KEY_0, "key.categories.helleon");
+	public static final KeyMapping GUARDIAN_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.guardian_ability_1", GLFW.GLFW_KEY_0, "key.categories.guardian");
+	public static final KeyMapping WARRIOR_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.warrior_ability_1", GLFW.GLFW_KEY_0, "key.categories.warrior");
+	public static final KeyMapping NECROMANCERABILITY_1 = new KeyMapping("key.dnd_classes_mod.necromancerability_1", GLFW.GLFW_KEY_0, "key.categories.necro");
+	public static final KeyMapping ARCHER_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.archer_ability_1", GLFW.GLFW_KEY_0, "key.categories.archer");
+	public static final KeyMapping ASSASSINABILITY_1 = new KeyMapping("key.dnd_classes_mod.assassinability_1", GLFW.GLFW_KEY_0, "key.categories.assassin");
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(DIVINE_BLESSING);
 		event.register(CLERIC_GUI_OPEN);
+		event.register(C_KEY);
+		event.register(V_KEY);
+		event.register(B_KEY);
+		event.register(NINJAABILITY_1);
+		event.register(DRUID_ABILITY_1);
+		event.register(SHAMAN_ABILITY_1);
+		event.register(HELLEON_ABILITY_1);
+		event.register(GUARDIAN_ABILITY_1);
+		event.register(WARRIOR_ABILITY_1);
+		event.register(NECROMANCERABILITY_1);
+		event.register(ARCHER_ABILITY_1);
+		event.register(ASSASSINABILITY_1);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -47,6 +110,9 @@ public class DndClassesModModKeyMappings {
 		public static void onClientTick(TickEvent.ClientTickEvent event) {
 			if (Minecraft.getInstance().screen == null) {
 				CLERIC_GUI_OPEN.consumeClick();
+				C_KEY.consumeClick();
+				V_KEY.consumeClick();
+				B_KEY.consumeClick();
 			}
 		}
 	}

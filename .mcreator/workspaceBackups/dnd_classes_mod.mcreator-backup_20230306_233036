@@ -39,13 +39,14 @@
     {
       "name": "ClericGui",
       "type": "gui",
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cleric_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java"
         ]
       },
       "path": "~/Classes/Cleric/Cleric Gui"
@@ -145,6 +146,95 @@
         ]
       },
       "path": "~/Generic Settings/Mana Config"
+    },
+    {
+      "name": "PlayerManaRegen",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_mana_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/PlayerManaRegenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Generic Settings/Mana Config"
+    },
+    {
+      "name": "ChooseClassGui",
+      "type": "gui",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choose_class_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java"
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Gui"
+    },
+    {
+      "name": "ClericGuiAccessProcedure",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cleric_gui_access_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/ClericGuiAccessProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Classes/Cleric/Cleric Procedures"
+    },
+    {
+      "name": "ClericGuiOpen",
+      "type": "keybind",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cleric_gui_open",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/ClericGuiOpenMessage.java"
+        ]
+      },
+      "path": "~/Classes/Cleric/Cleric KeyBinds"
     }
   ],
   "variable_elements": [
@@ -183,11 +273,26 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
+    },
+    {
+      "name": "IsManaUser",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
+    },
+    {
+      "name": "IsStaminaUser",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "true"
     }
   ],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
+      "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open"
+    }
   },
   "foldersRoot": {
     "name": "~",
@@ -213,14 +318,6 @@
             "children": []
           },
           {
-            "name": "Stamina Config",
-            "children": []
-          },
-          {
-            "name": "Mana Config",
-            "children": []
-          },
-          {
             "name": "Levelling System",
             "children": [
               {
@@ -230,8 +327,20 @@
               {
                 "name": "Level Up Config",
                 "children": []
+              },
+              {
+                "name": "Leveling_System_Overlay",
+                "children": []
               }
             ]
+          },
+          {
+            "name": "Stamina Config",
+            "children": []
+          },
+          {
+            "name": "Mana Config",
+            "children": []
           }
         ]
       },
@@ -295,6 +404,24 @@
           {
             "name": "Cleric",
             "children": [
+              {
+                "name": "Cleric Procedures",
+                "children": [
+                  {
+                    "name": "Abilities",
+                    "children": [
+                      {
+                        "name": "GodsGift",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "name": "Cleric KeyBinds",
+                "children": []
+              },
               {
                 "name": "Cleric Gui",
                 "children": []

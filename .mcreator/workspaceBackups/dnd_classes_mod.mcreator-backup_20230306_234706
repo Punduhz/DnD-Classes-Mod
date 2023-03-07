@@ -39,14 +39,14 @@
     {
       "name": "ClericGui",
       "type": "gui",
-      "sortid": 8,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cleric_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java"
         ]
       },
       "path": "~/Classes/Cleric/Cleric Gui"
@@ -188,19 +188,6 @@
       "path": "~/Beginner Selection/Selection Gui"
     },
     {
-      "name": "ClericGuiOpen",
-      "type": "keybind",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cleric_gui_open",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/network/ClericGuiOpenMessage.java"
-        ]
-      },
-      "path": "~/Classes/Cleric/Cleric KeyBinds"
-    },
-    {
       "name": "ClericGuiAccessProcedure",
       "type": "procedure",
       "sortid": 9,
@@ -237,37 +224,30 @@
       "path": "~/Classes/Cleric/Cleric Procedures"
     },
     {
-      "name": "LevelingSystemOverlayValue",
-      "type": "procedure",
-      "sortid": 10,
+      "name": "ClericGuiOpen",
+      "type": "keybind",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "leveling_system_overlay_value",
+      "registry_name": "cleric_gui_open",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/LevelingSystemOverlayValueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
+          "src/main/java/net/mcreator/dndclassesmod/network/ClericGuiOpenMessage.java"
         ]
       },
-      "path": "~/Generic Settings/Levelling System/Leveling_System_Overlay"
+      "path": "~/Classes/Cleric/Cleric KeyBinds"
     },
     {
-      "name": "LevelingSystemOverlay",
-      "type": "overlay",
+      "name": "GodsGift",
+      "type": "potioneffect",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "leveling_system_overlay",
+      "registry_name": "gods_gift",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/screens/LevelingSystemOverlayOverlay.java"
+          "src/main/java/net/mcreator/dndclassesmod/potion/GodsGiftMobEffect.java"
         ]
       },
-      "path": "~/Generic Settings/Levelling System/Leveling_System_Overlay"
+      "path": "~/Classes/Cleric/Cleric Potion Effects"
     }
   ],
   "variable_elements": [
@@ -311,13 +291,13 @@
       "name": "IsManaUser",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "false"
+      "value": "true"
     },
     {
       "name": "IsStaminaUser",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "false"
+      "value": "true"
     }
   ],
   "sound_elements": [],
@@ -325,7 +305,7 @@
     "en_us": {
       "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
       "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open",
-      "gui.dnd_classes_mod.leveling_system_overlay.label_empty": "Level:"
+      "effect.dnd_classes_mod.gods_gift": "Gods Gift"
     }
   },
   "foldersRoot": {
@@ -352,14 +332,6 @@
             "children": []
           },
           {
-            "name": "Stamina Config",
-            "children": []
-          },
-          {
-            "name": "Mana Config",
-            "children": []
-          },
-          {
             "name": "Levelling System",
             "children": [
               {
@@ -375,6 +347,14 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "Stamina Config",
+            "children": []
+          },
+          {
+            "name": "Mana Config",
+            "children": []
           }
         ]
       },
@@ -439,15 +419,29 @@
             "name": "Cleric",
             "children": [
               {
-                "name": "Cleric Gui",
-                "children": []
+                "name": "Cleric Procedures",
+                "children": [
+                  {
+                    "name": "Abilities",
+                    "children": [
+                      {
+                        "name": "GodsGift",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "name": "Cleric KeyBinds",
                 "children": []
               },
               {
-                "name": "Cleric Procedures",
+                "name": "Cleric Gui",
+                "children": []
+              },
+              {
+                "name": "Cleric Potion Effects",
                 "children": []
               }
             ]

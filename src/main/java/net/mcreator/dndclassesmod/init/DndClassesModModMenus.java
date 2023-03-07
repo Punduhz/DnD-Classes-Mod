@@ -13,10 +13,12 @@ import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.dndclassesmod.world.inventory.ClericGuiMenu;
 import net.mcreator.dndclassesmod.world.inventory.ChooseClassGuiMenu;
+import net.mcreator.dndclassesmod.world.inventory.ChakraReleaseSelectionMenu;
 import net.mcreator.dndclassesmod.DndClassesModMod;
 
 public class DndClassesModModMenus {
 	public static final DeferredRegister<MenuType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.MENU_TYPES, DndClassesModMod.MODID);
 	public static final RegistryObject<MenuType<ChooseClassGuiMenu>> CHOOSE_CLASS_GUI = REGISTRY.register("choose_class_gui", () -> IForgeMenuType.create(ChooseClassGuiMenu::new));
 	public static final RegistryObject<MenuType<ClericGuiMenu>> CLERIC_GUI = REGISTRY.register("cleric_gui", () -> IForgeMenuType.create(ClericGuiMenu::new));
+	public static final RegistryObject<MenuType<ChakraReleaseSelectionMenu>> CHAKRA_RELEASE_SELECTION = REGISTRY.register("chakra_release_selection", () -> IForgeMenuType.create(ChakraReleaseSelectionMenu::new));
 }

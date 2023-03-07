@@ -1,0 +1,17 @@
+{
+  "_fv": 39,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Gods Gift",
+    "icon": "360_f_402107248_lld1pzd9aymhgvhabfcpowqdwidt7kpj.png",
+    "color": {
+      "value": -3098532,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

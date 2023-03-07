@@ -1,4 +1,9 @@
 {
   "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
-  "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open"
+  "gui.dnd_classes_mod.chakra_release_selection.button_lightning_release": "Lightning Release",
+  "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open",
+  "gui.dnd_classes_mod.chakra_release_selection.button_fire_release": "Fire Release",
+  "gui.dnd_classes_mod.chakra_release_selection.button_wind_release": "Wind Release",
+  "effect.dnd_classes_mod.gods_gift": "Gods Gift",
+  "gui.dnd_classes_mod.chakra_release_selection.button_water_release": "Water Release"
 }

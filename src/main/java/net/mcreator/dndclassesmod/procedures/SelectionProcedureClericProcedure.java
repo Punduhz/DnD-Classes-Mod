@@ -47,5 +47,26 @@ public class SelectionProcedureClericProcedure {
 				}, _bpos);
 			}
 		}
+		{
+			boolean _setval = true;
+			entity.getCapability(DndClassesModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.IsManaUser = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			double _setval = 200;
+			entity.getCapability(DndClassesModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Player_Max_Mana = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
+		{
+			double _setval = 200;
+			entity.getCapability(DndClassesModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Player_Available_Mana = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

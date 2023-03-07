@@ -212,13 +212,13 @@
       "name": "IsManaUser",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "false"
+      "value": "true"
     },
     {
       "name": "IsStaminaUser",
       "type": "logic",
       "scope": "player_persistent",
-      "value": "false"
+      "value": "true"
     }
   ],
   "sound_elements": [],

@@ -1,31 +1,8 @@
 package net.mcreator.dndclassesmod.procedures;
 
-import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.eventbus.api.Event;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.player.Inventory;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.MenuProvider;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import net.mcreator.dndclassesmod.world.inventory.WarriorGuiMainMenu;
-import net.mcreator.dndclassesmod.world.inventory.ShamanGuiMainMenu;
-import net.mcreator.dndclassesmod.world.inventory.NinjaGuiMainMenu;
-import net.mcreator.dndclassesmod.world.inventory.NecromancerGuiMainMenu;
-import net.mcreator.dndclassesmod.world.inventory.HelleonGuiMainMenu;
-import net.mcreator.dndclassesmod.world.inventory.GuardianGuiMainMenu;
-import net.mcreator.dndclassesmod.world.inventory.DruidGuiMainMenu;
-import net.mcreator.dndclassesmod.world.inventory.ClericGuiMenu;
-import net.mcreator.dndclassesmod.world.inventory.AssassinGuiMainMenu;
-import net.mcreator.dndclassesmod.world.inventory.ArcherGuiMainMenu;
-import net.mcreator.dndclassesmod.network.DndClassesModModVariables;
-
-import io.netty.buffer.Unpooled;
+import javax.annotation.Nullable;
 
 public class MainGuiOpenProcedureProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

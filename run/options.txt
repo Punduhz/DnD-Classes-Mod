@@ -111,7 +111,7 @@ key_key.hotbar.6:key.keyboard.6
 key_key.hotbar.7:key.keyboard.7
 key_key.hotbar.8:key.keyboard.8
 key_key.hotbar.9:key.keyboard.9
-key_key.dnd_classes_mod.divine_blessing:key.keyboard.0
+key_key.dnd_classes_mod.divine_blessing:key.keyboard.v
 key_key.dnd_classes_mod.cleric_gui_open:key.keyboard.x
 key_key.dnd_classes_mod.c_key:key.keyboard.c
 key_key.dnd_classes_mod.v_key:key.keyboard.v

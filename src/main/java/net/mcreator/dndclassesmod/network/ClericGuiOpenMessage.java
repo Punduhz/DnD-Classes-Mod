@@ -1,11 +1,22 @@
 
 package net.mcreator.dndclassesmod.network;
 
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.FriendlyByteBuf;
+
+import net.mcreator.dndclassesmod.procedures.ClericGuiAccessProcedureProcedure;
 import net.mcreator.dndclassesmod.DndClassesModMod;
+
+import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ClericGuiOpenMessage {
-
 	int type, pressedms;
 
 	public ClericGuiOpenMessage(int type, int pressedms) {
@@ -36,21 +47,17 @@ public class ClericGuiOpenMessage {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(entity.blockPosition()))
 			return;
-
 		if (type == 0) {
 
 			ClericGuiAccessProcedureProcedure.execute(world, x, y, z, entity);
 		}
-
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		DndClassesModMod.addNetworkMessage(ClericGuiOpenMessage.class, ClericGuiOpenMessage::buffer, ClericGuiOpenMessage::new, ClericGuiOpenMessage::handler);
 	}
-
 }

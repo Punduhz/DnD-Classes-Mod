@@ -116,8 +116,8 @@ public class DndClassesModModVariables {
 		public double Player_Available_Mana = 0;
 		public double Player_XP = 0;
 		public double Player_Level = 1.0;
-		public boolean IsManaUser = false;
-		public boolean IsStaminaUser = false;
+		public boolean IsManaUser = true;
+		public boolean IsStaminaUser = true;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)

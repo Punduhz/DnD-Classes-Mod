@@ -11,22 +11,22 @@
     "doesPauseGame": false,
     "components": [
       {
-        "type": "image",
-        "data": {
-          "image": "recolored_tech_tree.png",
-          "use1Xscale": false,
-          "x": 45,
-          "y": 20
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_resized_divine_cleansing",
           "image": "resized_divine_cleansing.png",
           "hoveredImage": "",
-          "x": 94,
-          "y": 145
+          "x": 95,
+          "y": 144
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "tech_tree_cleric_v.2.png",
+          "use1Xscale": false,
+          "x": 46,
+          "y": 19
         }
       }
     ],

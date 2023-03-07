@@ -6,9 +6,12 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.dndclassesmod.world.inventory.ChooseClassGuiMenu;
+import net.mcreator.dndclassesmod.network.ChooseClassGuiButtonMessage;
+import net.mcreator.dndclassesmod.DndClassesModMod;
 
 import java.util.HashMap;
 
@@ -20,6 +23,7 @@ public class ChooseClassGuiScreen extends AbstractContainerScreen<ChooseClassGui
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_cleric;
 
 	public ChooseClassGuiScreen(ChooseClassGuiMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -83,5 +87,13 @@ public class ChooseClassGuiScreen extends AbstractContainerScreen<ChooseClassGui
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
+		button_cleric = new Button(this.leftPos + -29, this.topPos + -97, 56, 20, Component.translatable("gui.dnd_classes_mod.choose_class_gui.button_cleric"), e -> {
+			if (true) {
+				DndClassesModMod.PACKET_HANDLER.sendToServer(new ChooseClassGuiButtonMessage(0, x, y, z));
+				ChooseClassGuiButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		});
+		guistate.put("button:button_cleric", button_cleric);
+		this.addRenderableWidget(button_cleric);
 	}
 }

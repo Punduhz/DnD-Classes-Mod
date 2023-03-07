@@ -68,5 +68,12 @@ public class SelectionProcedureClericProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
+		{
+			double _setval = 1;
+			entity.getCapability(DndClassesModModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.Class_Checker = _setval;
+				capability.syncPlayerVariables(entity);
+			});
+		}
 	}
 }

@@ -18,6 +18,20 @@
           "x": 43,
           "y": 12
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_cleric",
+          "text": "Cleric",
+          "onClick": {
+            "name": "SelectionProcedureCleric"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 184,
+          "y": 23
+        }
       }
     ],
     "gridSettings": {

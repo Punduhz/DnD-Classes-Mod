@@ -326,6 +326,10 @@
               {
                 "name": "Level Up Config",
                 "children": []
+              },
+              {
+                "name": "Leveling_System_Overlay",
+                "children": []
               }
             ]
           },

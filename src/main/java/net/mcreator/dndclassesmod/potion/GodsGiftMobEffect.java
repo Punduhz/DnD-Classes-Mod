@@ -1,8 +1,10 @@
 
 package net.mcreator.dndclassesmod.potion;
 
-public class GodsGiftMobEffect extends MobEffect {
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+public class GodsGiftMobEffect extends MobEffect {
 	public GodsGiftMobEffect() {
 		super(MobEffectCategory.BENEFICIAL, -3098532);
 	}
@@ -16,5 +18,4 @@ public class GodsGiftMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

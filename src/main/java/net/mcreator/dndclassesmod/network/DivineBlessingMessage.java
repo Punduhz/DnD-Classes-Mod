@@ -1,11 +1,19 @@
 
 package net.mcreator.dndclassesmod.network;
 
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+
+import net.minecraft.network.FriendlyByteBuf;
+
 import net.mcreator.dndclassesmod.DndClassesModMod;
+
+import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DivineBlessingMessage {
-
 	int type, pressedms;
 
 	public DivineBlessingMessage(int type, int pressedms) {
@@ -34,5 +42,4 @@ public class DivineBlessingMessage {
 	public static void registerMessage(FMLCommonSetupEvent event) {
 		DndClassesModMod.addNetworkMessage(DivineBlessingMessage.class, DivineBlessingMessage::buffer, DivineBlessingMessage::new, DivineBlessingMessage::handler);
 	}
-
 }

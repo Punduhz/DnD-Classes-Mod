@@ -234,6 +234,84 @@
         ]
       },
       "path": "~/Classes/Cleric/Cleric KeyBinds"
+    },
+    {
+      "name": "GodsGift",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gods_gift",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/potion/GodsGiftMobEffect.java"
+        ]
+      },
+      "path": "~/Classes/Cleric/Cleric Potion Effects"
+    },
+    {
+      "name": "GodsGiftProcedure",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gods_gift_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/GodsGiftProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Classes/Cleric/Cleric Procedures/Abilities/GodsGift"
+    },
+    {
+      "name": "ChakraReleaseSelection",
+      "type": "gui",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chakra_release_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChakraReleaseSelectionScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChakraReleaseSelectionMenu.java"
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Gui"
+    },
+    {
+      "name": "DivineBlessing",
+      "type": "keybind",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "divine_blessing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/DivineBlessingMessage.java"
+        ]
+      },
+      "path": "~/Classes/Cleric/Cleric KeyBinds"
     }
   ],
   "variable_elements": [
@@ -318,6 +396,10 @@
             "children": []
           },
           {
+            "name": "KeyBinds",
+            "children": []
+          },
+          {
             "name": "Levelling System",
             "children": [
               {
@@ -340,10 +422,6 @@
           },
           {
             "name": "Mana Config",
-            "children": []
-          },
-          {
-            "name": "KeyBinds",
             "children": []
           }
         ]
@@ -410,10 +488,24 @@
             "children": [
               {
                 "name": "Cleric Procedures",
-                "children": []
+                "children": [
+                  {
+                    "name": "Abilities",
+                    "children": [
+                      {
+                        "name": "GodsGift",
+                        "children": []
+                      }
+                    ]
+                  }
+                ]
               },
               {
                 "name": "Cleric KeyBinds",
+                "children": []
+              },
+              {
+                "name": "Cleric Potion Effects",
                 "children": []
               },
               {
@@ -427,6 +519,10 @@
             "children": [
               {
                 "name": "Ninja Gui",
+                "children": []
+              },
+              {
+                "name": "Ninja Procedures",
                 "children": []
               }
             ]

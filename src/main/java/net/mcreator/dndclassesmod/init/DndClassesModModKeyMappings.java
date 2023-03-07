@@ -20,6 +20,7 @@ import net.mcreator.dndclassesmod.DndClassesModMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class DndClassesModModKeyMappings {
+	public static final KeyMapping DIVINE_BLESSING = new KeyMapping("key.dnd_classes_mod.divine_blessing", GLFW.GLFW_KEY_0, "key.categories.cleric");
 	public static final KeyMapping CLERIC_GUI_OPEN = new KeyMapping("key.dnd_classes_mod.cleric_gui_open", GLFW.GLFW_KEY_X, "key.categories.cleric") {
 		private boolean isDownOld = false;
 
@@ -36,6 +37,7 @@ public class DndClassesModModKeyMappings {
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
+		event.register(DIVINE_BLESSING);
 		event.register(CLERIC_GUI_OPEN);
 	}
 

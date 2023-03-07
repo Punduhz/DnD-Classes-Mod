@@ -225,12 +225,27 @@
     {
       "name": "ClericGuiOpen",
       "type": "keybind",
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cleric_gui_open",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/dndclassesmod/network/ClericGuiOpenMessage.java"
+        ]
+      },
+      "path": "~/Classes/Cleric/Cleric KeyBinds"
+    },
+    {
+      "name": "DivineBlessing",
+      "type": "keybind",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "divine_blessing",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/DivineBlessingMessage.java"
         ]
       },
       "path": "~/Classes/Cleric/Cleric KeyBinds"
@@ -289,6 +304,7 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
+      "key.dnd_classes_mod.divine_blessing": "Divine Blessing",
       "key.categories.cleric": "Cleric Skills",
       "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
       "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open"

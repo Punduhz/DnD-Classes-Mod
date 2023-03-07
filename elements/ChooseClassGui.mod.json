@@ -20,13 +20,17 @@
         }
       },
       {
-        "type": "imagebutton",
+        "type": "button",
         "data": {
-          "name": "imagebutton_cleric_emblem",
-          "image": "cleric_emblem.png",
-          "hoveredImage": "",
-          "x": 192,
-          "y": 12
+          "name": "button_cleric",
+          "text": "Cleric",
+          "onClick": {
+            "name": "SelectionProcedureCleric"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 184,
+          "y": 23
         }
       }
     ],

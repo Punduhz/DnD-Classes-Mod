@@ -39,7 +39,7 @@
     {
       "name": "ClericGui",
       "type": "gui",
-      "sortid": 8,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cleric_gui",
@@ -180,8 +180,9 @@
       "registry_name": "choose_class_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java"
+          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java"
         ]
       },
       "path": "~/Beginner Selection/Selection Gui"

@@ -1,0 +1,9 @@
+{
+  "_fv": 39,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "0",
+    "keyBindingName": "Archer Ability 1",
+    "keyBindingCategoryKey": "archer"
+  }
+}

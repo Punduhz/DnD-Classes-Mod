@@ -180,9 +180,9 @@
       "registry_name": "choose_class_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java",
           "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java"
+          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java"
         ]
       },
       "path": "~/Beginner Selection/Selection Gui"
@@ -431,6 +431,132 @@
         ]
       },
       "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "Ninjaability1",
+      "type": "keybind",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ninjaability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/Ninjaability1Message.java"
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Keybinds"
+    },
+    {
+      "name": "DruidAbility1",
+      "type": "keybind",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "druid_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/DruidAbility1Message.java"
+        ]
+      },
+      "path": "~/Classes/Druid/Druid Keybinds"
+    },
+    {
+      "name": "ShamanAbility1",
+      "type": "keybind",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shaman_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/ShamanAbility1Message.java"
+        ]
+      },
+      "path": "~/Classes/Shaman/Shaman Keybinds"
+    },
+    {
+      "name": "HelleonAbility1",
+      "type": "keybind",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "helleon_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/HelleonAbility1Message.java"
+        ]
+      },
+      "path": "~/Classes/Helleon/Helleon Keybinds"
+    },
+    {
+      "name": "GuardianAbility1",
+      "type": "keybind",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "guardian_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/GuardianAbility1Message.java"
+        ]
+      },
+      "path": "~/Classes/Guardian/Guardian Keybinds"
+    },
+    {
+      "name": "WarriorAbility1",
+      "type": "keybind",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warrior_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/WarriorAbility1Message.java"
+        ]
+      },
+      "path": "~/Classes/Warrior/Warror Keybinds"
+    },
+    {
+      "name": "Necromancerability1",
+      "type": "keybind",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "necromancerability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/Necromancerability1Message.java"
+        ]
+      },
+      "path": "~/Classes/Necromancer/Necromancer Keybinds"
+    },
+    {
+      "name": "ArcherAbility1",
+      "type": "keybind",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "archer_ability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/ArcherAbility1Message.java"
+        ]
+      },
+      "path": "~/Classes/Archer/Archer Keybinds"
+    },
+    {
+      "name": "Assassinability1",
+      "type": "keybind",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "assassinability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/Assassinability1Message.java"
+        ]
+      },
+      "path": "~/Classes/Assassin/Assasin Keybinds"
     }
   ],
   "variable_elements": [
@@ -505,17 +631,35 @@
   "language_map": {
     "en_us": {
       "key.categories.cleric": "Cleric Skills",
+      "key.dnd_classes_mod.guardian_ability_1": "Guardian Ability 1",
+      "key.dnd_classes_mod.warrior_ability_1": "Warrior Ability 1",
+      "key.categories.assassin": "Assassin Skills",
       "gui.dnd_classes_mod.chakra_release_selection.button_fire_release": "Fire Release",
-      "effect.dnd_classes_mod.gods_gift": "Gods Gift",
       "key.dnd_classes_mod.c_key": "C Key",
       "key.dnd_classes_mod.v_key": "V Key",
-      "key.dnd_classes_mod.divine_blessing": "Divine Blessing",
-      "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
+      "key.categories.guardian": "Guardian Skills",
+      "key.dnd_classes_mod.archer_ability_1": "Archer Ability 1",
+      "key.categories.archer": "Archer Skills",
+      "key.categories.ninja": "Ninja Skills",
       "gui.dnd_classes_mod.chakra_release_selection.button_lightning_release": "Lightning Release",
+      "key.categories.necro": "Necromancer Skills",
       "key.dnd_classes_mod.cleric_gui_open": "Cleric Gui Open",
+      "gui.dnd_classes_mod.chakra_release_selection.button_water_release": "Water Release",
+      "key.dnd_classes_mod.necromancerability_1": "Necromancerability 1",
+      "key.categories.druid": "Druid Skills",
+      "key.categories.warrior": "Warrior Skills",
+      "key.dnd_classes_mod.assassinability_1": "Assassinability 1",
+      "effect.dnd_classes_mod.gods_gift": "Gods Gift",
+      "key.dnd_classes_mod.druid_ability_1": "Druid Ability 1",
+      "key.dnd_classes_mod.shaman_ability_1": "Shaman Ability 1",
+      "key.dnd_classes_mod.ninjaability_1": "Ninjaability 1",
+      "key.dnd_classes_mod.divine_blessing": "Divine Blessing",
+      "key.dnd_classes_mod.helleon_ability_1": "Helleon Ability 1",
+      "key.categories.helleon": "Helleon Skills",
+      "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
+      "key.categories.shaman": "Shaman Skills",
       "gui.dnd_classes_mod.chakra_release_selection.button_wind_release": "Wind Release",
-      "key.dnd_classes_mod.b_key": "B Key",
-      "gui.dnd_classes_mod.chakra_release_selection.button_water_release": "Water Release"
+      "key.dnd_classes_mod.b_key": "B Key"
     }
   },
   "foldersRoot": {
@@ -581,6 +725,10 @@
               {
                 "name": "Helleon Gui",
                 "children": []
+              },
+              {
+                "name": "Helleon Keybinds",
+                "children": []
               }
             ]
           },
@@ -589,6 +737,10 @@
             "children": [
               {
                 "name": "Guardian Gui",
+                "children": []
+              },
+              {
+                "name": "Guardian Keybinds",
                 "children": []
               }
             ]
@@ -599,6 +751,10 @@
               {
                 "name": "Warrior Gui",
                 "children": []
+              },
+              {
+                "name": "Warror Keybinds",
+                "children": []
               }
             ]
           },
@@ -607,6 +763,10 @@
             "children": [
               {
                 "name": "Necromancer Gui",
+                "children": []
+              },
+              {
+                "name": "Necromancer Keybinds",
                 "children": []
               }
             ]
@@ -617,6 +777,10 @@
               {
                 "name": "Archer Gui",
                 "children": []
+              },
+              {
+                "name": "Archer Keybinds",
+                "children": []
               }
             ]
           },
@@ -625,6 +789,10 @@
             "children": [
               {
                 "name": "Assassin Gui",
+                "children": []
+              },
+              {
+                "name": "Assasin Keybinds",
                 "children": []
               }
             ]
@@ -679,6 +847,10 @@
                     "children": []
                   }
                 ]
+              },
+              {
+                "name": "Ninja Keybinds",
+                "children": []
               }
             ]
           },
@@ -688,6 +860,10 @@
               {
                 "name": "Druid Gui",
                 "children": []
+              },
+              {
+                "name": "Druid Keybinds",
+                "children": []
               }
             ]
           },
@@ -696,6 +872,10 @@
             "children": [
               {
                 "name": "Shaman Gui",
+                "children": []
+              },
+              {
+                "name": "Shaman Keybinds",
                 "children": []
               }
             ]

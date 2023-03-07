@@ -15,8 +15,8 @@
         "data": {
           "image": "class_selection.png",
           "use1Xscale": false,
-          "x": 39,
-          "y": 1
+          "x": 44,
+          "y": 8
         }
       },
       {
@@ -28,8 +28,8 @@
           "onClick": {
             "name": "SelectionProcedureCleric"
           },
-          "x": 188,
-          "y": 0
+          "x": 192,
+          "y": 8
         }
       }
     ],

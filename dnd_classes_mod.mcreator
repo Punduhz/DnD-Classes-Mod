@@ -180,8 +180,8 @@
       "registry_name": "choose_class_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java"
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java"
         ]
       },
       "path": "~/Beginner Selection/Selection Gui"

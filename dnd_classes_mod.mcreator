@@ -1,5 +1,55 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Asd",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "asd",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/AsdScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/AsdMenu.java"
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Gui"
+    },
+    {
+      "name": "PlayerClassChecker",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_class_checker",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/PlayerClassCheckerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Config"
+    }
+  ],
   "variable_elements": [
     {
       "name": "Class_Checker",

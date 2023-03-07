@@ -85,46 +85,6 @@
         ]
       },
       "path": "~/Beginner Selection/Selection Config"
-    },
-    {
-      "name": "XPGainProcedure",
-      "type": "procedure",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "xp_gain_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/XPGainProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "sourceentity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Generic Settings/Levelling System/XP_Gain"
-    },
-    {
-      "name": "PlayerLevelUpProcedure",
-      "type": "procedure",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_level_up_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/PlayerLevelUpProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Generic Settings/Levelling System/Level Up Config"
     }
   ],
   "variable_elements": [

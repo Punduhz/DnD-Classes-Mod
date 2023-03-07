@@ -76,6 +76,15 @@ public class DndClassesModModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping NINJAABILITY_1 = new KeyMapping("key.dnd_classes_mod.ninjaability_1", GLFW.GLFW_KEY_0, "key.categories.ninja");
+	public static final KeyMapping DRUID_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.druid_ability_1", GLFW.GLFW_KEY_0, "key.categories.druid");
+	public static final KeyMapping SHAMAN_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.shaman_ability_1", GLFW.GLFW_KEY_0, "key.categories.shaman");
+	public static final KeyMapping HELLEON_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.helleon_ability_1", GLFW.GLFW_KEY_0, "key.categories.helleon");
+	public static final KeyMapping GUARDIAN_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.guardian_ability_1", GLFW.GLFW_KEY_0, "key.categories.guardian");
+	public static final KeyMapping WARRIOR_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.warrior_ability_1", GLFW.GLFW_KEY_0, "key.categories.warrior");
+	public static final KeyMapping NECROMANCERABILITY_1 = new KeyMapping("key.dnd_classes_mod.necromancerability_1", GLFW.GLFW_KEY_0, "key.categories.necro");
+	public static final KeyMapping ARCHER_ABILITY_1 = new KeyMapping("key.dnd_classes_mod.archer_ability_1", GLFW.GLFW_KEY_0, "key.categories.archer");
+	public static final KeyMapping ASSASSINABILITY_1 = new KeyMapping("key.dnd_classes_mod.assassinability_1", GLFW.GLFW_KEY_0, "key.categories.assassin");
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
@@ -84,6 +93,15 @@ public class DndClassesModModKeyMappings {
 		event.register(C_KEY);
 		event.register(V_KEY);
 		event.register(B_KEY);
+		event.register(NINJAABILITY_1);
+		event.register(DRUID_ABILITY_1);
+		event.register(SHAMAN_ABILITY_1);
+		event.register(HELLEON_ABILITY_1);
+		event.register(GUARDIAN_ABILITY_1);
+		event.register(WARRIOR_ABILITY_1);
+		event.register(NECROMANCERABILITY_1);
+		event.register(ARCHER_ABILITY_1);
+		event.register(ASSASSINABILITY_1);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})

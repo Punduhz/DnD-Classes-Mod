@@ -3,8 +3,8 @@
   "_type": "gui",
   "definition": {
     "type": 0,
-    "width": 348,
-    "height": 214,
+    "width": 0,
+    "height": 0,
     "inventoryOffsetX": 0,
     "inventoryOffsetY": 0,
     "renderBgLayer": true,
@@ -16,17 +16,17 @@
           "name": "imagebutton_resized_divine_cleansing",
           "image": "resized_divine_cleansing.png",
           "hoveredImage": "",
-          "x": 96,
+          "x": 101,
           "y": 144
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "cleric_tech_tree_layout.png",
+          "image": "tech_tree_cleric_no_background.png",
           "use1Xscale": false,
-          "x": 47,
-          "y": 20
+          "x": 63,
+          "y": 23
         }
       }
     ],

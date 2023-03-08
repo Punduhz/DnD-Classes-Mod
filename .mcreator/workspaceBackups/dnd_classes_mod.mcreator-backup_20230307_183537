@@ -45,8 +45,8 @@
       "registry_name": "cleric_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java"
         ]
       },
       "path": "~/Classes/Cleric/Cleric Gui"
@@ -124,9 +124,9 @@
       "registry_name": "choose_class_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java",
           "src/main/java/net/mcreator/dndclassesmod/world/inventory/ChooseClassGuiMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ChooseClassGuiScreen.java"
+          "src/main/java/net/mcreator/dndclassesmod/network/ChooseClassGuiButtonMessage.java"
         ]
       },
       "path": "~/Beginner Selection/Selection Gui"
@@ -222,6 +222,137 @@
         ]
       },
       "path": "~/Classes/Cleric/Cleric KeyBinds"
+    },
+    {
+      "name": "CKey",
+      "type": "keybind",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_key",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/CKeyMessage.java"
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "KeyAssignments",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "key_assignments",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/KeyAssignmentsProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "CSet",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "c_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/CSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "VSet",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/VSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "BSet",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_set",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/BSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "VKey",
+      "type": "keybind",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "v_key",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/VKeyMessage.java"
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "BKey",
+      "type": "keybind",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "b_key",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/BKeyMessage.java"
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Procedures/KeyBinds"
+    },
+    {
+      "name": "Ninjaability1",
+      "type": "keybind",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ninjaability_1",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/network/Ninjaability1Message.java"
+        ]
+      },
+      "path": "~/Classes/Ninja/Ninja Keybinds"
     },
     {
       "name": "DruidAbility1",
@@ -336,286 +467,6 @@
       "path": "~/Classes/Assassin/Assasin Keybinds"
     },
     {
-      "name": "DivineBlessingProcedures",
-      "type": "procedure",
-      "sortid": 30,
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "divine_blessing_procedures",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/DivineBlessingProceduresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Classes/Cleric/Cleric Procedures/Abilities/Divine Blessing"
-    },
-    {
-      "name": "ClericSelection",
-      "type": "procedure",
-      "sortid": 31,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cleric_selection",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/ClericSelectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
-    },
-    {
-      "name": "ShamanSelection",
-      "type": "procedure",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shaman_selection",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/ShamanSelectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
-    },
-    {
-      "name": "ShamanGuiMain",
-      "type": "gui",
-      "sortid": 33,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shaman_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/network/ShamanGuiMainButtonMessage.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ShamanGuiMainScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ShamanGuiMainMenu.java"
-        ]
-      },
-      "path": "~/Classes/Shaman/Shaman Gui"
-    },
-    {
-      "name": "HelleonGuiMain",
-      "type": "gui",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "helleon_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/HelleonGuiMainMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/HelleonGuiMainScreen.java"
-        ]
-      },
-      "path": "~/Classes/Helleon/Helleon Gui"
-    },
-    {
-      "name": "GuardianGuiMain",
-      "type": "gui",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "guardian_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/GuardianGuiMainScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/GuardianGuiMainMenu.java"
-        ]
-      },
-      "path": "~/Classes/Guardian/Guardian Gui"
-    },
-    {
-      "name": "WarriorGuiMain",
-      "type": "gui",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "warrior_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/WarriorGuiMainMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/WarriorGuiMainScreen.java"
-        ]
-      },
-      "path": "~/Classes/Warrior/Warrior Gui"
-    },
-    {
-      "name": "NecromancerGuiMain",
-      "type": "gui",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "necromancer_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/NecromancerGuiMainMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/NecromancerGuiMainScreen.java"
-        ]
-      },
-      "path": "~/Classes/Necromancer/Necromancer Gui"
-    },
-    {
-      "name": "DruidGuiMain",
-      "type": "gui",
-      "sortid": 38,
-      "compiles": false,
-      "locked_code": false,
-      "registry_name": "druid_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/DruidGuiMainMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/DruidGuiMainScreen.java"
-        ]
-      },
-      "path": "~/Classes/Druid/Druid Gui"
-    },
-    {
-      "name": "NinjaGuiMain",
-      "type": "gui",
-      "sortid": 39,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ninja_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/NinjaGuiMainScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/NinjaGuiMainMenu.java"
-        ]
-      },
-      "path": "~/Classes/Ninja/Ninja Gui"
-    },
-    {
-      "name": "ArcherGuiMain",
-      "type": "gui",
-      "sortid": 40,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "archer_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ArcherGuiMainMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ArcherGuiMainScreen.java"
-        ]
-      },
-      "path": "~/Classes/Archer/Archer Gui"
-    },
-    {
-      "name": "AssassinGuiMain",
-      "type": "gui",
-      "sortid": 41,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "assassin_gui_main",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/AssassinGuiMainMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/AssassinGuiMainScreen.java"
-        ]
-      },
-      "path": "~/Classes/Assassin/Assassin Gui"
-    },
-    {
-      "name": "DruidSelection",
-      "type": "procedure",
-      "sortid": 42,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "druid_selection",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/DruidSelectionProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
-    },
-    {
       "name": "GuardianSelection",
       "type": "procedure",
       "sortid": 43,
@@ -650,6 +501,21 @@
         ]
       },
       "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
+    },
+    {
+      "name": "WarriorGuiMain",
+      "type": "gui",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "warrior_gui_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/WarriorGuiMainMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/WarriorGuiMainScreen.java"
+        ]
+      },
+      "path": "~/Classes/Warrior/Warrior Gui"
     },
     {
       "name": "NecromancerSelection",
@@ -688,6 +554,51 @@
       "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
     },
     {
+      "name": "GuardianGuiMain",
+      "type": "gui",
+      "sortid": 35,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "guardian_gui_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/GuardianGuiMainScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/GuardianGuiMainMenu.java"
+        ]
+      },
+      "path": "~/Classes/Guardian/Guardian Gui"
+    },
+    {
+      "name": "ArcherGuiMain",
+      "type": "gui",
+      "sortid": 40,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "archer_gui_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ArcherGuiMainMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ArcherGuiMainScreen.java"
+        ]
+      },
+      "path": "~/Classes/Archer/Archer Gui"
+    },
+    {
+      "name": "NecromancerGuiMain",
+      "type": "gui",
+      "sortid": 37,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "necromancer_gui_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/NecromancerGuiMainScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/NecromancerGuiMainMenu.java"
+        ]
+      },
+      "path": "~/Classes/Necromancer/Necromancer Gui"
+    },
+    {
       "name": "HelleonSelection",
       "type": "procedure",
       "sortid": 45,
@@ -724,6 +635,57 @@
       "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
     },
     {
+      "name": "DruidSelection",
+      "type": "procedure",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "druid_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/DruidSelectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
+    },
+    {
+      "name": "AssassinGuiMain",
+      "type": "gui",
+      "sortid": 41,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "assassin_gui_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/AssassinGuiMainMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/AssassinGuiMainScreen.java"
+        ]
+      },
+      "path": "~/Classes/Assassin/Assassin Gui"
+    },
+    {
       "name": "MainGuiOpen",
       "type": "keybind",
       "sortid": 46,
@@ -738,10 +700,112 @@
       "path": "~/Generic Settings/KeyBinds"
     },
     {
+      "name": "ClericSelection",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cleric_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/ClericSelectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
+    },
+    {
+      "name": "ShamanGuiMain",
+      "type": "gui",
+      "sortid": 33,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "shaman_gui_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ShamanGuiMainScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ShamanGuiMainMenu.java"
+        ]
+      },
+      "path": "~/Classes/Shaman/Shaman Gui"
+    },
+    {
+      "name": "ShamanSelection",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shaman_selection",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/procedures/ShamanSelectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Beginner Selection/Selection Config/Class_Selection_Procedures"
+    },
+    {
+      "name": "HelleonGuiMain",
+      "type": "gui",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "helleon_gui_main",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/HelleonGuiMainMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/HelleonGuiMainScreen.java"
+        ]
+      },
+      "path": "~/Classes/Helleon/Helleon Gui"
+    },
+    {
       "name": "MainGuiOpenProcedure",
       "type": "procedure",
       "sortid": 47,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "main_gui_open_procedure",
       "metadata": {
@@ -774,45 +838,30 @@
       "path": "~/Generic Settings/KeyBinds"
     },
     {
-      "name": "TotemGui",
+      "name": "NinjaGuiMain",
       "type": "gui",
-      "sortid": 54,
-      "compiles": true,
+      "sortid": 39,
+      "compiles": false,
       "locked_code": false,
-      "registry_name": "totem_gui",
+      "registry_name": "ninja_gui_main",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/TotemGuiMenu.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/TotemGuiScreen.java"
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/NinjaGuiMainScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/NinjaGuiMainMenu.java"
         ]
       },
-      "path": "~/Classes/Shaman/Shaman Gui"
+      "path": "~/Classes/Ninja/Ninja Gui"
     },
     {
-      "name": "Totem",
-      "type": "livingentity",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "totem",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/entity/TotemEntity.java",
-          "src/main/java/net/mcreator/dndclassesmod/client/renderer/TotemRenderer.java",
-          "src/main/resources/assets/dnd_classes_mod/models/item/totem_spawn_egg.json"
-        ]
-      },
-      "path": "~/Classes/Shaman/Shaman Procedures"
-    },
-    {
-      "name": "SummonTotem",
+      "name": "DivineBlessingProcedures",
       "type": "procedure",
-      "sortid": 51,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "summon_totem",
+      "registry_name": "divine_blessing_procedures",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/SummonTotemProcedure.java"
+          "src/main/java/net/mcreator/dndclassesmod/procedures/DivineBlessingProceduresProcedure.java"
         ],
         "dependencies": [
           {
@@ -837,94 +886,22 @@
           }
         ]
       },
-      "path": "~/Classes/Shaman/Shaman Procedures"
+      "path": "~/Classes/Cleric/Cleric Procedures/Abilities/Divine Blessing"
     },
     {
-      "name": "TotemKill",
-      "type": "procedure",
-      "sortid": 50,
-      "compiles": true,
+      "name": "DruidGuiMain",
+      "type": "gui",
+      "sortid": 38,
+      "compiles": false,
       "locked_code": false,
-      "registry_name": "totem_kill",
+      "registry_name": "druid_gui_main",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/TotemKillProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/DruidGuiMainScreen.java",
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/DruidGuiMainMenu.java"
         ]
       },
-      "path": "~/Classes/Shaman/Shaman Procedures"
-    },
-    {
-      "name": "TotemProcedures",
-      "type": "procedure",
-      "sortid": 52,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "totem_procedures",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/TotemProceduresProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Classes/Shaman/Shaman Procedures"
-    },
-    {
-      "name": "TotemUnlock",
-      "type": "procedure",
-      "sortid": 53,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "totem_unlock",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/dndclassesmod/procedures/TotemUnlockProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Classes/Shaman/Shaman Procedures"
+      "path": "~/Classes/Druid/Druid Gui"
     }
   ],
   "variable_elements": [
@@ -993,12 +970,6 @@
       "type": "string",
       "scope": "player_persistent",
       "value": ""
-    },
-    {
-      "name": "Shaman_Can_Use_Totem",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     }
   ],
   "sound_elements": [],
@@ -1008,7 +979,6 @@
       "key.dnd_classes_mod.guardian_ability_1": "Guardian Ability 1",
       "key.dnd_classes_mod.warrior_ability_1": "Warrior Ability 1",
       "key.categories.assassin": "Assassin Skills",
-      "gui.dnd_classes_mod.shaman_gui_main.button_totem_unlock": "Totem Unlock",
       "gui.dnd_classes_mod.chakra_release_selection.button_fire_release": "Fire Release",
       "key.dnd_classes_mod.c_key": "C Key",
       "gui.dnd_classes_mod.choose_class_gui.button_necromancer": "Necromancer",
@@ -1033,7 +1003,6 @@
       "gui.dnd_classes_mod.choose_class_gui.button_druid": "Druid",
       "gui.dnd_classes_mod.choose_class_gui.button_assassin": "Assassin",
       "key.dnd_classes_mod.druid_ability_1": "Druid Ability 1",
-      "key.dnd_classes_mod.main_gui_open": "Main Gui Open",
       "key.dnd_classes_mod.shaman_ability_1": "Shaman Ability 1",
       "gui.dnd_classes_mod.choose_class_gui.button_helleon": "Helleon",
       "key.dnd_classes_mod.ninjaability_1": "Ninjaability 1",
@@ -1043,8 +1012,8 @@
       "gui.dnd_classes_mod.choose_class_gui.button_cleric": "Cleric",
       "key.categories.shaman": "Shaman Skills",
       "gui.dnd_classes_mod.chakra_release_selection.button_wind_release": "Wind Release",
-      "gui.dnd_classes_mod.choose_class_gui.button_guardian": "Guardian",
-      "key.dnd_classes_mod.b_key": "B Key"
+      "key.dnd_classes_mod.b_key": "B Key",
+      "gui.dnd_classes_mod.choose_class_gui.button_guardian": "Guardian"
     }
   },
   "foldersRoot": {
@@ -1109,11 +1078,11 @@
             "name": "Helleon",
             "children": [
               {
-                "name": "Helleon Gui",
+                "name": "Helleon Keybinds",
                 "children": []
               },
               {
-                "name": "Helleon Keybinds",
+                "name": "Helleon Gui",
                 "children": []
               }
             ]
@@ -1122,11 +1091,11 @@
             "name": "Guardian",
             "children": [
               {
-                "name": "Guardian Gui",
+                "name": "Guardian Keybinds",
                 "children": []
               },
               {
-                "name": "Guardian Keybinds",
+                "name": "Guardian Gui",
                 "children": []
               }
             ]
@@ -1148,11 +1117,11 @@
             "name": "Necromancer",
             "children": [
               {
-                "name": "Necromancer Gui",
+                "name": "Necromancer Keybinds",
                 "children": []
               },
               {
-                "name": "Necromancer Keybinds",
+                "name": "Necromancer Gui",
                 "children": []
               }
             ]
@@ -1161,11 +1130,11 @@
             "name": "Archer",
             "children": [
               {
-                "name": "Archer Gui",
+                "name": "Archer Keybinds",
                 "children": []
               },
               {
-                "name": "Archer Keybinds",
+                "name": "Archer Gui",
                 "children": []
               }
             ]
@@ -1227,7 +1196,16 @@
               },
               {
                 "name": "Ninja Procedures",
-                "children": []
+                "children": [
+                  {
+                    "name": "Ninja HandSignProcedures",
+                    "children": []
+                  },
+                  {
+                    "name": "KeyBinds",
+                    "children": []
+                  }
+                ]
               },
               {
                 "name": "Ninja Keybinds",
@@ -1257,10 +1235,6 @@
               },
               {
                 "name": "Shaman Keybinds",
-                "children": []
-              },
-              {
-                "name": "Shaman Procedures",
                 "children": []
               }
             ]

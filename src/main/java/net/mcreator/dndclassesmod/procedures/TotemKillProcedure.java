@@ -1,9 +1,8 @@
 package net.mcreator.dndclassesmod.procedures;
 
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.core.BlockPos;
+import net.minecraftforge.eventbus.api.Event;
+
+import javax.annotation.Nullable;
 
 public class TotemKillProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

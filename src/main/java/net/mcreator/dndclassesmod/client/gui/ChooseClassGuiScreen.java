@@ -133,7 +133,7 @@ public class ChooseClassGuiScreen extends AbstractContainerScreen<ChooseClassGui
 		});
 		guistate.put("button:button_shaman", button_shaman);
 		this.addRenderableWidget(button_shaman);
-		imagebutton_cleric_emblem = new ImageButton(this.leftPos + -21, this.topPos + -112, 37, 43, 0, 0, 43, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_cleric_emblem.png"), 37, 86, e -> {
+		imagebutton_cleric_emblem = new ImageButton(this.leftPos + -23, this.topPos + -112, 37, 43, 0, 0, 43, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_cleric_emblem.png"), 37, 86, e -> {
 			if (true) {
 				DndClassesModMod.PACKET_HANDLER.sendToServer(new ChooseClassGuiButtonMessage(9, x, y, z));
 				ChooseClassGuiButtonMessage.handleButtonAction(entity, 9, x, y, z);

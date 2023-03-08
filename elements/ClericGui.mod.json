@@ -16,17 +16,17 @@
           "name": "imagebutton_resized_divine_cleansing",
           "image": "resized_divine_cleansing.png",
           "hoveredImage": "",
-          "x": 95,
+          "x": 96,
           "y": 144
         }
       },
       {
         "type": "image",
         "data": {
-          "image": "tech_tree_cleric_v.2.png",
+          "image": "cleric_tech_tree_layout.png",
           "use1Xscale": false,
-          "x": 46,
-          "y": 19
+          "x": 47,
+          "y": 20
         }
       }
     ],

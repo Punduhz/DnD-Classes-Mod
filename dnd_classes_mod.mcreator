@@ -45,8 +45,8 @@
       "registry_name": "cleric_gui",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java",
-          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java"
+          "src/main/java/net/mcreator/dndclassesmod/world/inventory/ClericGuiMenu.java",
+          "src/main/java/net/mcreator/dndclassesmod/client/gui/ClericGuiScreen.java"
         ]
       },
       "path": "~/Classes/Cleric/Cleric Gui"
@@ -557,7 +557,7 @@
       "name": "GuardianGuiMain",
       "type": "gui",
       "sortid": 35,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "guardian_gui_main",
       "metadata": {
@@ -572,7 +572,7 @@
       "name": "ArcherGuiMain",
       "type": "gui",
       "sortid": 40,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "archer_gui_main",
       "metadata": {
@@ -674,7 +674,7 @@
       "name": "AssassinGuiMain",
       "type": "gui",
       "sortid": 41,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "assassin_gui_main",
       "metadata": {
@@ -739,7 +739,7 @@
       "name": "ShamanGuiMain",
       "type": "gui",
       "sortid": 33,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "shaman_gui_main",
       "metadata": {
@@ -841,7 +841,7 @@
       "name": "NinjaGuiMain",
       "type": "gui",
       "sortid": 39,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ninja_gui_main",
       "metadata": {
@@ -892,7 +892,7 @@
       "name": "DruidGuiMain",
       "type": "gui",
       "sortid": 38,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "druid_gui_main",
       "metadata": {

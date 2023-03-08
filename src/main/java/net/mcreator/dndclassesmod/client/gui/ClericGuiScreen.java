@@ -51,8 +51,8 @@ public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
 
-		RenderSystem.setShaderTexture(0, new ResourceLocation("dnd_classes_mod:textures/screens/tech_tree_cleric_v.2.png"));
-		this.blit(ms, this.leftPos + 6, this.topPos + 6, 0, 0, 334, 200, 334, 200);
+		RenderSystem.setShaderTexture(0, new ResourceLocation("dnd_classes_mod:textures/screens/cleric_tech_tree_layout.png"));
+		this.blit(ms, this.leftPos + 7, this.topPos + 7, 0, 0, 334, 200, 334, 200);
 
 		RenderSystem.disableBlend();
 	}
@@ -85,7 +85,7 @@ public class ClericGuiScreen extends AbstractContainerScreen<ClericGuiMenu> {
 	public void init() {
 		super.init();
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-		imagebutton_resized_divine_cleansing = new ImageButton(this.leftPos + 55, this.topPos + 131, 28, 28, 0, 0, 28, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_resized_divine_cleansing.png"), 28, 56, e -> {
+		imagebutton_resized_divine_cleansing = new ImageButton(this.leftPos + 56, this.topPos + 131, 28, 28, 0, 0, 28, new ResourceLocation("dnd_classes_mod:textures/screens/atlas/imagebutton_resized_divine_cleansing.png"), 28, 56, e -> {
 		});
 		guistate.put("button:imagebutton_resized_divine_cleansing", imagebutton_resized_divine_cleansing);
 		this.addRenderableWidget(imagebutton_resized_divine_cleansing);

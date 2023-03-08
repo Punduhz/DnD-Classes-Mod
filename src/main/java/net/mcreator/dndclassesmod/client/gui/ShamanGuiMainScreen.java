@@ -1,12 +1,29 @@
 package net.mcreator.dndclassesmod.client.gui;
 
+import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.chat.Component;
+import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.Minecraft;
+
+import net.mcreator.dndclassesmod.world.inventory.ShamanGuiMainMenu;
+import net.mcreator.dndclassesmod.network.ShamanGuiMainButtonMessage;
+import net.mcreator.dndclassesmod.DndClassesModMod;
+
+import java.util.HashMap;
+
+import com.mojang.blaze3d.vertex.PoseStack;
+import com.mojang.blaze3d.systems.RenderSystem;
+
 public class ShamanGuiMainScreen extends AbstractContainerScreen<ShamanGuiMainMenu> {
-
 	private final static HashMap<String, Object> guistate = ShamanGuiMainMenu.guistate;
-
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
+	Button button_totem_unlock;
 
 	public ShamanGuiMainScreen(ShamanGuiMainMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -26,7 +43,6 @@ public class ShamanGuiMainScreen extends AbstractContainerScreen<ShamanGuiMainMe
 		this.renderBackground(ms);
 		super.render(ms, mouseX, mouseY, partialTicks);
 		this.renderTooltip(ms, mouseX, mouseY);
-
 	}
 
 	@Override
@@ -34,10 +50,8 @@ public class ShamanGuiMainScreen extends AbstractContainerScreen<ShamanGuiMainMe
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-
 		RenderSystem.setShaderTexture(0, texture);
 		this.blit(ms, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
-
 		RenderSystem.disableBlend();
 	}
 
@@ -47,7 +61,6 @@ public class ShamanGuiMainScreen extends AbstractContainerScreen<ShamanGuiMainMe
 			this.minecraft.player.closeContainer();
 			return true;
 		}
-
 		return super.keyPressed(key, b, c);
 	}
 
@@ -69,9 +82,14 @@ public class ShamanGuiMainScreen extends AbstractContainerScreen<ShamanGuiMainMe
 	@Override
 	public void init() {
 		super.init();
-
 		this.minecraft.keyboardHandler.setSendRepeatsToGui(true);
-
+		button_totem_unlock = new Button(this.leftPos + 41, this.topPos + 31, 87, 20, Component.translatable("gui.dnd_classes_mod.shaman_gui_main.button_totem_unlock"), e -> {
+			if (true) {
+				DndClassesModMod.PACKET_HANDLER.sendToServer(new ShamanGuiMainButtonMessage(0, x, y, z));
+				ShamanGuiMainButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		});
+		guistate.put("button:button_totem_unlock", button_totem_unlock);
+		this.addRenderableWidget(button_totem_unlock);
 	}
-
 }

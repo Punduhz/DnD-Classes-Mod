@@ -12,6 +12,7 @@ import net.minecraftforge.common.extensions.IForgeMenuType;
 import net.minecraft.world.inventory.MenuType;
 
 import net.mcreator.dndclassesmod.world.inventory.WarriorGuiMainMenu;
+import net.mcreator.dndclassesmod.world.inventory.TotemGuiMenu;
 import net.mcreator.dndclassesmod.world.inventory.ShamanGuiMainMenu;
 import net.mcreator.dndclassesmod.world.inventory.NinjaGuiMainMenu;
 import net.mcreator.dndclassesmod.world.inventory.NecromancerGuiMainMenu;
@@ -39,4 +40,5 @@ public class DndClassesModModMenus {
 	public static final RegistryObject<MenuType<NinjaGuiMainMenu>> NINJA_GUI_MAIN = REGISTRY.register("ninja_gui_main", () -> IForgeMenuType.create(NinjaGuiMainMenu::new));
 	public static final RegistryObject<MenuType<ArcherGuiMainMenu>> ARCHER_GUI_MAIN = REGISTRY.register("archer_gui_main", () -> IForgeMenuType.create(ArcherGuiMainMenu::new));
 	public static final RegistryObject<MenuType<AssassinGuiMainMenu>> ASSASSIN_GUI_MAIN = REGISTRY.register("assassin_gui_main", () -> IForgeMenuType.create(AssassinGuiMainMenu::new));
+	public static final RegistryObject<MenuType<TotemGuiMenu>> TOTEM_GUI = REGISTRY.register("totem_gui", () -> IForgeMenuType.create(TotemGuiMenu::new));
 }

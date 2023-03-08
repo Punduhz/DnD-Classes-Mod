@@ -12,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.dndclassesmod.client.gui.WarriorGuiMainScreen;
+import net.mcreator.dndclassesmod.client.gui.TotemGuiScreen;
 import net.mcreator.dndclassesmod.client.gui.ShamanGuiMainScreen;
 import net.mcreator.dndclassesmod.client.gui.NinjaGuiMainScreen;
 import net.mcreator.dndclassesmod.client.gui.NecromancerGuiMainScreen;
@@ -41,6 +42,7 @@ public class DndClassesModModScreens {
 			MenuScreens.register(DndClassesModModMenus.NINJA_GUI_MAIN.get(), NinjaGuiMainScreen::new);
 			MenuScreens.register(DndClassesModModMenus.ARCHER_GUI_MAIN.get(), ArcherGuiMainScreen::new);
 			MenuScreens.register(DndClassesModModMenus.ASSASSIN_GUI_MAIN.get(), AssassinGuiMainScreen::new);
+			MenuScreens.register(DndClassesModModMenus.TOTEM_GUI.get(), TotemGuiScreen::new);
 		});
 	}
 }

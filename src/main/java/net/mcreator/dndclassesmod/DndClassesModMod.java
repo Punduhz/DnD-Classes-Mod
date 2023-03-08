@@ -31,6 +31,8 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.dndclassesmod.init.DndClassesModModMobEffects;
 import net.mcreator.dndclassesmod.init.DndClassesModModMenus;
+import net.mcreator.dndclassesmod.init.DndClassesModModItems;
+import net.mcreator.dndclassesmod.init.DndClassesModModEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -50,6 +52,9 @@ public class DndClassesModMod {
 		MinecraftForge.EVENT_BUS.register(this);
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+
+		DndClassesModModItems.REGISTRY.register(bus);
+		DndClassesModModEntities.REGISTRY.register(bus);
 
 		DndClassesModModMobEffects.REGISTRY.register(bus);
 

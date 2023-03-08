@@ -130,6 +130,10 @@ public class ChooseClassGuiScreen extends AbstractContainerScreen<ChooseClassGui
 		guistate.put("button:button_ninja", button_ninja);
 		this.addRenderableWidget(button_ninja);
 		button_shaman = new Button(this.leftPos + 20, this.topPos + -85, 56, 20, Component.translatable("gui.dnd_classes_mod.choose_class_gui.button_shaman"), e -> {
+			if (true) {
+				DndClassesModMod.PACKET_HANDLER.sendToServer(new ChooseClassGuiButtonMessage(8, x, y, z));
+				ChooseClassGuiButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
 		});
 		guistate.put("button:button_shaman", button_shaman);
 		this.addRenderableWidget(button_shaman);

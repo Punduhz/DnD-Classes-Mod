@@ -2,8 +2,11 @@
   "_fv": 39,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "0",
+    "triggerKey": "C",
     "keyBindingName": "Shaman Ability 1",
-    "keyBindingCategoryKey": "shaman"
+    "keyBindingCategoryKey": "shaman",
+    "onKeyPressed": {
+      "name": "SummonTotem"
+    }
   }
 }

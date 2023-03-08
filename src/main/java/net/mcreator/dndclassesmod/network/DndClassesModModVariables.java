@@ -77,6 +77,7 @@ public class DndClassesModModVariables {
 			clone.Ninja_HandSign_1 = original.Ninja_HandSign_1;
 			clone.Ninja_HandSign_2 = original.Ninja_HandSign_2;
 			clone.Ninja_HandSign_3 = original.Ninja_HandSign_3;
+			clone.Shaman_Can_Use_Totem = original.Shaman_Can_Use_Totem;
 			if (!event.isWasDeath()) {
 			}
 		}
@@ -124,6 +125,7 @@ public class DndClassesModModVariables {
 		public String Ninja_HandSign_1 = "";
 		public String Ninja_HandSign_2 = "";
 		public String Ninja_HandSign_3 = "";
+		public boolean Shaman_Can_Use_Totem = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -143,6 +145,7 @@ public class DndClassesModModVariables {
 			nbt.putString("Ninja_HandSign_1", Ninja_HandSign_1);
 			nbt.putString("Ninja_HandSign_2", Ninja_HandSign_2);
 			nbt.putString("Ninja_HandSign_3", Ninja_HandSign_3);
+			nbt.putBoolean("Shaman_Can_Use_Totem", Shaman_Can_Use_Totem);
 			return nbt;
 		}
 
@@ -159,6 +162,7 @@ public class DndClassesModModVariables {
 			Ninja_HandSign_1 = nbt.getString("Ninja_HandSign_1");
 			Ninja_HandSign_2 = nbt.getString("Ninja_HandSign_2");
 			Ninja_HandSign_3 = nbt.getString("Ninja_HandSign_3");
+			Shaman_Can_Use_Totem = nbt.getBoolean("Shaman_Can_Use_Totem");
 		}
 	}
 
@@ -194,6 +198,7 @@ public class DndClassesModModVariables {
 					variables.Ninja_HandSign_1 = message.data.Ninja_HandSign_1;
 					variables.Ninja_HandSign_2 = message.data.Ninja_HandSign_2;
 					variables.Ninja_HandSign_3 = message.data.Ninja_HandSign_3;
+					variables.Shaman_Can_Use_Totem = message.data.Shaman_Can_Use_Totem;
 				}
 			});
 			context.setPacketHandled(true);
